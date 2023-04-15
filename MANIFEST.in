@@ -1,0 +1,2 @@
+recursive-include tutortailwind/patches *
+recursive-include tutortailwind/templates *
