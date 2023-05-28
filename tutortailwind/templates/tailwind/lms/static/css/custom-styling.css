@@ -28,3 +28,10 @@ a {
 .fa:before {
     font-family: 'FontAwesome' !important;
 }
+
+.accomplishment-rendering {
+    background-image: url("/static/tailwind/images/certificate_background.jpeg");
+    background-size: cover;
+    -webkit-print-color-adjust: exact !important;
+    color-adjust: exact !important;
+}

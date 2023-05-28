@@ -9,6 +9,9 @@ module.exports = {
       fontFamily: {
         'sans': ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
       },
+      height: {
+        '120': '30rem',
+      }
     },
   },
   plugins: [
