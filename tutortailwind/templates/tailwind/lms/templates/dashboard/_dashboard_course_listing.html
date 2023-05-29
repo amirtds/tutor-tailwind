@@ -59,7 +59,7 @@ from lms.djangoapps.courseware.courses import get_course_blocks_completion_summa
 
 <%namespace name='static' file='../static_content.html'/>
 
-<li class="course-item">
+<li class="course-item bg-white rounded-md">
   % if display_course_modes_on_dashboard:
     <%
         course_verified_certs = enrollment_mode_display(
@@ -80,7 +80,7 @@ from lms.djangoapps.courseware.courses import get_course_blocks_completion_summa
     lang="${course_overview.language}"
 % endif
 >
-<article class="relative isolate flex flex-col gap-14 lg:flex-row mt-12 course${mode_class}" aria-labelledby="course-title-${enrollment.course_id}" id="course-card-${course_card_index}">
+<article class="relative isolate flex flex-col gap-14 lg:flex-row mt-12 pt-6 course${mode_class}" aria-labelledby="course-title-${enrollment.course_id}" id="course-card-${course_card_index}">
   <% course_target = course_home_url(course_overview.id) %>
   <%
     enrollment_date = course_overview.self_paced and enrollment and enrollment.created
@@ -138,7 +138,7 @@ from lms.djangoapps.courseware.courses import get_course_blocks_completion_summa
         </span>
       % endif
     </div>
-    <div class="wrapper-course-details">
+    <div class="wrapper-course-details flex-auto">
         <h2 class="hd hd-2 sr" id="details-heading-${enrollment.course_id}">${_('Course details')}</h2>                
         <span class="info-date-block-container">
             % if not is_unfulfilled_entitlement and is_course_expired:
@@ -199,7 +199,7 @@ from lms.djangoapps.courseware.courses import get_course_blocks_completion_summa
                     </div>
                 % endif
             </div>
-            <div id="completion" class="border-y-2 border-gray-900/5 mb-4">
+            <div id="completion" class="border-y-2 border-gray-900/5 mb-8">
               <%
                 # get user progress
                 completion_summary = get_course_blocks_completion_summary(enrollment.course_id, user)
@@ -221,6 +221,9 @@ from lms.djangoapps.courseware.courses import get_course_blocks_completion_summa
               <div class="course-progress my-4">
                 <span class="progress-bar-label">${_('Progress')}</span>
                 <span class="text-xl font-bold mx-2">${percent_complete}%</span>
+                <div class="h-2 bg-gray-200 rounded mb-6">
+                  <div class="h-full bg-green-500 rounded" style="width: ${percent_complete}%"></div>
+                </div>
                 <span class="grade-bar-label">${_('Current Grade')}</span>
                 <span class="text-xl font-bold mx-2">${grade}%</span>
                 <span class="grade-bar-label">${_('Passing Grade')}</span>
@@ -352,7 +355,7 @@ from lms.djangoapps.courseware.courses import get_course_blocks_completion_summa
     </div>
     <div class="wrapper-course-actions pt-6">
       <div class="course-actions mt-4">
-        <h3 class="font-semibold">${_("Settings")}</h3>
+        <h3 class="font-semibold mb-4">${_("Settings")}</h3>
         % if show_courseware_link or course_overview.has_social_sharing_url() or course_overview.has_marketing_url():
             % if share_settings:
                 <%
@@ -372,7 +375,7 @@ from lms.djangoapps.courseware.courses import get_course_blocks_completion_summa
                     <a
                       data-tooltip="${_('Share on Facebook')}"
                       data-trigger="focus hover"
-                      class="action action-facebook"
+                      class="action action-facebook text-2xl"
                       href="${facebook_url}"
                       rel="noopener"
                       target="_blank"
@@ -394,7 +397,7 @@ from lms.djangoapps.courseware.courses import get_course_blocks_completion_summa
                     <a
                       data-tooltip="${_('Share on Twitter')}"
                       data-trigger="focus hover"
-                      class="action action-twitter"
+                      class="action action-twitter text-2xl"
                       href="${twitter_url}"
                       rel="noopener"
                       target="_blank"
