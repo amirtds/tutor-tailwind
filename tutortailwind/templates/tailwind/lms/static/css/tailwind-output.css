@@ -1320,6 +1320,10 @@ select {
   height: 30rem !important;
 }
 
+.h-16 {
+  height: 4rem !important;
+}
+
 .h-2 {
   height: 0.5rem !important;
 }
@@ -1424,6 +1428,10 @@ select {
 
 .flex-col {
   flex-direction: column !important;
+}
+
+.flex-wrap {
+  flex-wrap: wrap !important;
 }
 
 .items-start {
@@ -1608,6 +1616,18 @@ select {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
 }
 
+.bg-cover {
+  background-size: cover !important;
+}
+
+.bg-center {
+  background-position: center !important;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat !important;
+}
+
 .fill-blue-300\/70 {
   fill: rgb(147 197 253 / 0.7) !important;
 }
@@ -1636,8 +1656,17 @@ select {
      object-position: left !important;
 }
 
+.p-2 {
+  padding: 0.5rem !important;
+}
+
 .p-4 {
   padding: 1rem !important;
+}
+
+.px-12 {
+  padding-left: 3rem !important;
+  padding-right: 3rem !important;
 }
 
 .px-2 {

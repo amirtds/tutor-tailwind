@@ -1,5 +1,5 @@
 <%page expression_filter="h"/>
-<%! from django.utils.translation import gettext as _ %>
+<%! from django.utils.translation import ugettext as _ %>
 <%namespace name='static' file='../static_content.html'/>
 <%
 course_mode_class = course_mode if course_mode else ''
@@ -8,55 +8,53 @@ course_mode_class = course_mode if course_mode else ''
 <main class="accomplishment accomplishment-main">
 
     <div class="wrapper-accomplishment-rendering">
-        <div class="accomplishment-rendering">
+        <div class="accomplishment-rendering" style="background-image: url('/static/tailwind/images/certificates/certificate_background.jpeg'); background-size: cover;">
             <span class="deco-corner deco-corner-tl"></span>
             <span class="deco-corner deco-corner-tr"></span>
             <span class="deco-corner deco-corner-bl"></span>
             <span class="deco-corner deco-corner-br"></span>
 
-            <div class="accomplishment-type">
+            <!-- <div class="accomplishment-type">
                 <span class="accomplishment-type-symbol">
                     <img class="src" src="/static/certificates/images/ico-${course_mode_class}.png" alt="Image for course mode of type ${course_mode_class}">
                 </span>
-
                 <span class="accomplishment-type-label hd-3">${document_title}</span>
-            </div>
+            </div> -->
 
-            <div class="wrapper-statement-and-signatories">
-                <div class="accomplishment-statement">
-                    <p class="accomplishment-statement-lead">
-                        <strong class="accomplishment-recipient hd-1 emphasized">${accomplishment_copy_name}</strong>
-                        <span class="accomplishment-summary copy copy-lead">${accomplishment_copy_description_full}</span>
+            <div class="" style="margin-top: 200px;">
+                <div class="" style="width: 70%;float: left;text-align: left;margin-top: -13px;">
+                    <p class="accomplishment-statement-lead" style="margin-bottom: 4rem;">
+                        <span class="accomplishment-summary copy copy-lead" style="margin-bottom: 11px;margin-left: calc(0.5 * 1rem);width: 70%;">This is to certify that </span>
+                        <strong class="accomplishment-recipient hd-1 emphasized" style="font-size: 1.4rem;margin-bottom: 11px;">${accomplishment_copy_name}</strong>
+                        <span class="accomplishment-summary copy copy-lead" style="margin-bottom: 11px;">has successfully completed and received a passing grade in </span>
 
                         <span class="accomplishment-course hd-1 emphasized">
-                            <span class="accomplishment-course-org">${accomplishment_copy_course_org}  </span>
-                            <span class="accomplishment-course-number">${course_number}</span>:
-                            <span class="accomplishment-course-name">${accomplishment_copy_course_name}</span>
+                            <span class="accomplishment-course-number" style="font-size: 1.4rem;">${course_number}</span>:
+                            <span class="accomplishment-course-name" style="font-size: 1.4rem;">${accomplishment_copy_course_name}</span>
                         </span>
+                        <span class="accomplishment-summary copy copy-lead" style="margin-bottom: 11px;">a course of study authorised by The Institute for Social Science and Humanities (Iran Academia) and offered through AcademiX</span>
                     </p>
 
-                    <p class="accomplishment-statement-detail copy copy-lead">${accomplishment_copy_course_description}</p>
+                    <!-- <p class="accomplishment-statement-detail copy copy-lead">${accomplishment_copy_course_description}</p> -->
                 </div>
 
                 % if mode != 'base':
-                <div class="accomplishment-signatories">
+                <div class="accomplishment-signatories" style="">
                     <h3 class="accomplishment-signatories-title sr-only">${_("Noted by")}</h3>
 
                     <div class="wrapper-signatories">
                         <div class="list-signatories">
                             % if certificate_data:
                                 % for signatory in certificate_data.get('signatories', []):
-                                    % if signatory.get('signature_image_path'):
-                                        <div class="signatory">
-                                            <img class="signatory-signature" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
+                                <div class="signatory" style="width: 50%;margin-top: -30px;">
+                                    <img style="display: block;max-height: 5rem;margin: 0 auto;" class="" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
 
-                                            <h4 class="signatory-name hd-5">${signatory['name']}</h4>
-                                            <p class="signatory-credentials copy copy-micro">
-                                                <span class="role">${signatory['title']}</span>
-                                                <span class="organization">${signatory['organization']}</span>
-                                            </p>
-                                        </div>
-                                    % endif
+                                    <h4 class="signatory-name hd-5">${signatory['name']}</h4>
+                                    <p class="signatory-credentials copy copy-micro">
+                                        <span class="role">${signatory['title']}</span>
+                                        <span class="organization">${signatory['organization']}</span>
+                                    </p>
+                                </div>
                                 % endfor
                             % endif
                         </div>
@@ -65,16 +63,14 @@ course_mode_class = course_mode if course_mode else ''
                 % endif
             </div>
 
-            <div class="accomplishment-orgs">
+            <!-- <div class="accomplishment-orgs">
                 <h3 class="accomplishment-orgs-title sr-only">${_("Supported by the following organizations")}</h3>
-
                 <ul class="wrapper-orgs list-orgs">
                     <li class="wrapper-organization">
                         <div class="organization organization-edX">
                             <img class="organization-logo" src="${logo_src}" alt="${platform_name}">
                         </div>
                     </li>
-
                     % if organization_logo:
                     <li class="wrapper-organization">
                         <div class="organization">
@@ -83,7 +79,7 @@ course_mode_class = course_mode if course_mode else ''
                     </li>
                     % endif
                 </ul>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -105,11 +101,11 @@ course_mode_class = course_mode if course_mode else ''
                     </dd>
                 </dl>
                 <dl class="metadata accomplishment-id">
-                    <dt class="label copy copy-meta">${certificate_id_number_title}:</dt>
                     <dd class="value copy copy-base">${certificate_id_number}</dd>
+                    <dt class="label copy copy-meta">Valid Certificate ID </dt>
                 </dl>
                 <dl class="metadata accomplishment-date">
-                    <dt class="label copy copy-meta">${certificate_date_issued_title}</dt>
+                    <dt class="label copy copy-meta">Date </dt>
                     <dd class="value copy copy-base">${certificate_date_issued}</dd>
                 </dl>
             </div>
@@ -117,3 +113,11 @@ course_mode_class = course_mode if course_mode else ''
     </div>
 
 </main>
+
+<style>
+    .accomplishment-rendering{
+        background-size: cover;
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+</style>
