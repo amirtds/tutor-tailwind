@@ -1218,6 +1218,11 @@ select {
   margin-right: auto !important;
 }
 
+.my-16 {
+  margin-top: 4rem !important;
+  margin-bottom: 4rem !important;
+}
+
 .my-2 {
   margin-top: 0.5rem !important;
   margin-bottom: 0.5rem !important;
@@ -1264,6 +1269,10 @@ select {
   margin-top: 4rem !important;
 }
 
+.mt-2 {
+  margin-top: 0.5rem !important;
+}
+
 .mt-4 {
   margin-top: 1rem !important;
 }
@@ -1297,10 +1306,6 @@ select {
 
 .hidden {
   display: none !important;
-}
-
-.aspect-\[1266\/975\] {
-  aspect-ratio: 1266/975 !important;
 }
 
 .aspect-\[16\/9\] {
@@ -1357,10 +1362,6 @@ select {
 
 .w-\[64rem\] {
   width: 64rem !important;
-}
-
-.w-\[79\.125rem\] {
-  width: 79.125rem !important;
 }
 
 .w-full {
@@ -1605,23 +1606,6 @@ select {
 .bg-white {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
-}
-
-.bg-gradient-to-tr {
-  background-image: linear-gradient(to top right, var(--tw-gradient-stops)) !important;
-}
-
-.from-\[\#ff4694\] {
-  --tw-gradient-from: #ff4694 var(--tw-gradient-from-position) !important;
-  --tw-gradient-from-position:   !important;
-  --tw-gradient-to: rgb(255 70 148 / 0)  var(--tw-gradient-from-position) !important;
-  --tw-gradient-to-position:   !important;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
-}
-
-.to-\[\#776fff\] {
-  --tw-gradient-to: #776fff var(--tw-gradient-to-position) !important;
-  --tw-gradient-to-position:   !important;
 }
 
 .fill-blue-300\/70 {
@@ -1906,10 +1890,6 @@ select {
 .antialiased {
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
-}
-
-.opacity-20 {
-  opacity: 0.2 !important;
 }
 
 .shadow-md {
@@ -2236,6 +2216,11 @@ select {
     left: -10rem !important;
   }
 
+  .sm\:my-20 {
+    margin-top: 5rem !important;
+    margin-bottom: 5rem !important;
+  }
+
   .sm\:mt-20 {
     margin-top: 5rem !important;
   }
@@ -2366,6 +2351,10 @@ select {
     width: 16rem !important;
   }
 
+  .lg\:max-w-2xl {
+    max-width: 42rem !important;
+  }
+
   .lg\:max-w-7xl {
     max-width: 80rem !important;
   }
@@ -2376,10 +2365,6 @@ select {
 
   .lg\:max-w-none {
     max-width: none !important;
-  }
-
-  .lg\:max-w-xl {
-    max-width: 36rem !important;
   }
 
   .lg\:shrink-0 {

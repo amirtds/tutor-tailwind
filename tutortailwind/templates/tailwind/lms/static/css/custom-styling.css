@@ -16,9 +16,14 @@ a {
     border-bottom: 1px solid rgba(0, 0, 0, 0.3) !important;
 }
 
-#custom-course-about-section h2 {
+#custom-course-about-section h2,
+#custom-course-about-section h3,
+#custom-course-about-section h4,
+#custom-course-about-section h5,
+#custom-course-about-section h6 {
     color: #f1f5f9 !important;
 }
+
 
 * {
     font-family: 'Inter', sans-serif !important;
