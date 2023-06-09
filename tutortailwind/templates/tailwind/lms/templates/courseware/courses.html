@@ -3,6 +3,7 @@
   import json
   from django.utils.translation import ugettext as _
   from openedx.core.djangolib.js_utils import js_escaped_string, dump_js_escaped_json
+  from lms.djangoapps.courseware.courses import get_courses, sort_by_announcement, sort_by_start_date
 %>
 <%inherit file="../main.html" />
 <%
@@ -59,11 +60,12 @@
         <div class="courses${'' if course_discovery_enabled else ' no-course-discovery'}" role="region" aria-label="${_('List of Courses')}">
           <ul class="courses-listing courses-list">
             %for course in courses:
-              %if not course.has_ended()
-                <li class="courses-listing-item">
-                  <%include file="../course.html" args="course=course" />
-                </li>
-              %endif
+              % if course.has_ended():
+                <%continue %>
+              % endif
+              <li class="courses-listing-item">
+                <%include file="../course.html" args="course=course" />
+              </li>
             %endfor
           </ul>
         </div>

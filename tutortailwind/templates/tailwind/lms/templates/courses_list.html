@@ -1,6 +1,7 @@
 <%page expression_filter="h"/>
 <%namespace name='static' file='static_content.html'/>
 <%! from django.utils.translation import gettext as _ %>
+<%! from lms.djangoapps.courseware.courses import get_courses, sort_by_announcement, sort_by_start_date %>
 
 % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
 <div class="bg-white py-24 sm:py-32">
@@ -30,13 +31,9 @@
               </div>
         </div>
       <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-        %counter = 0
-        %for course in courses:
-            %if not course.has_ended() and counter < homepage_course_max:
-                <%include file="course.html" args="course=course" />
-                %counter += 1
-            %endif
-        %endfor
+        %for course in sort_by_start_date(courses)[:homepage_course_max]:
+            <%include file="course.html" args="course=course" />
+        %endfor 
       </div>
     </div>
     % if homepage_course_max and len(courses) > homepage_course_max:
