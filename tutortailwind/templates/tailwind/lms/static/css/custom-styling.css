@@ -24,9 +24,13 @@ a {
     color: #f1f5f9 !important;
 }
 
+@font-face {
+    font-family: 'BMitra';
+    src: url('../fonts/mitra.ttf') format('truetype');
+}
 
 * {
-    font-family: 'Inter', sans-serif !important;
+    font-family: 'BMitra', sans-serif !important;
 }
 
 .fa,
