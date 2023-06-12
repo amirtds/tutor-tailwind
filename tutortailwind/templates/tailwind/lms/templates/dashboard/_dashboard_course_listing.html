@@ -445,7 +445,7 @@ from lms.djangoapps.courseware.courses import get_course_blocks_completion_summa
                 % endif
                   <li class="actions-item mt-4" id="actions-item-email-settings-${dashboard_index}" role="menuitem">
                     % if show_email_settings:
-                        <a href="#email-settings-modal" class="action action-email-settings" rel="leanModal" data-course-id="${course_overview.id}" data-course-number="${course_overview.number}" data-dashboard-index="${dashboard_index}" data-optout="${course_overview.id in course_optouts}">تنظیمات خبرنامه</a>
+                        <a href="#email-settings-modal" class="action action-email-settings" rel="leanModal" data-course-id="${course_overview.id}" data-course-number="${course_overview.number}" data-dashboard-index="${dashboard_index}" data-optout="${course_overview.id in course_optouts}">تنظیمات ایمیل</a>
                     % endif
                   </li>
                 </ul>
