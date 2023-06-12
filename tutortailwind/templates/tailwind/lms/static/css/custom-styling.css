@@ -26,7 +26,7 @@ a {
 
 @font-face {
     font-family: 'BMitra';
-    src: url('../fonts/mitra.ttf') format('truetype');
+    src: url('/static/tailwind/fonts/BMitra.ttf') format('truetype');
 }
 
 * {
