@@ -1757,19 +1757,23 @@ select {
 }
 
 .text-2xl {
-  font-size: 1.663rem !important;
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
 }
 
 .text-3xl {
-  font-size: 1.953rem !important;
+  font-size: 1.875rem !important;
+  line-height: 2.25rem !important;
 }
 
 .text-4xl {
-  font-size: 2.441rem !important;
+  font-size: 2.25rem !important;
+  line-height: 2.5rem !important;
 }
 
 .text-base {
-  font-size: 1.3rem !important;
+  font-size: 1rem !important;
+  line-height: 1.5rem !important;
 }
 
 .text-lg {
@@ -1778,11 +1782,13 @@ select {
 }
 
 .text-sm {
-  font-size: 0.8rem !important;
+  font-size: 0.875rem !important;
+  line-height: 1.25rem !important;
 }
 
 .text-xl {
-  font-size: 1.5rem !important;
+  font-size: 1.25rem !important;
+  line-height: 1.75rem !important;
 }
 
 .text-xs {
@@ -1961,7 +1967,8 @@ select {
   padding-right: 0.875rem !important;
   padding-top: 0.625rem !important;
   padding-bottom: 0.625rem !important;
-  font-size: 1.663rem !important;
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
   font-weight: 600 !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
@@ -1990,7 +1997,8 @@ select {
   padding-right: 0.875rem !important;
   padding-top: 0.625rem !important;
   padding-bottom: 0.625rem !important;
-  font-size: 1.663rem !important;
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
   font-weight: 600 !important;
   --tw-text-opacity: 1 !important;
   color: rgb(17 24 39 / var(--tw-text-opacity)) !important;
@@ -2018,7 +2026,8 @@ select {
   padding-right: 0.875rem !important;
   padding-top: 0.625rem !important;
   padding-bottom: 0.625rem !important;
-  font-size: 1.663rem !important;
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
   font-weight: 600 !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
@@ -2046,7 +2055,8 @@ select {
   padding-right: 0.875rem !important;
   padding-top: 0.625rem !important;
   padding-bottom: 0.625rem !important;
-  font-size: 1.663rem !important;
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
   font-weight: 600 !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
@@ -2067,7 +2077,8 @@ select {
   padding-right: 0.875rem;
   padding-top: 0.625rem !important;
   padding-bottom: 0.625rem !important;
-  font-size: 1.663rem !important;
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
   font-weight: 600 !important;
   --tw-text-opacity: 1 !important;
   color: rgb(2 132 199 / var(--tw-text-opacity)) !important;
@@ -2089,7 +2100,8 @@ select {
   padding-right: 1rem !important;
   padding-top: 0.625rem !important;
   padding-bottom: 0.625rem !important;
-  font-size: 1.663rem !important;
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
   font-weight: 600 !important;
   --tw-text-opacity: 1 !important;
   color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
@@ -2118,7 +2130,8 @@ select {
   padding-right: 1rem !important;
   padding-top: 0.625rem !important;
   padding-bottom: 0.625rem !important;
-  font-size: 1.663rem !important;
+  font-size: 1.5rem !important;
+  line-height: 2rem !important;
   font-weight: 600 !important;
   --tw-text-opacity: 1 !important;
   color: rgb(17 24 39 / var(--tw-text-opacity)) !important;
@@ -2286,7 +2299,8 @@ select {
   }
 
   .sm\:text-4xl {
-    font-size: 2.441rem !important;
+    font-size: 2.25rem !important;
+    line-height: 2.5rem !important;
   }
 
   .sm\:text-6xl {
