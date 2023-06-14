@@ -13,7 +13,15 @@
   from openedx.core.lib.courses import course_image_url
   from six import string_types
 %>
+<%
+  import datetime
 
+  datetime_format = "%Y-%m-%dT%H:%M:%S%z"
+  new_format = "%B %d, %Y"
+  if course.enrollment_start:
+    enrollment_start = datetime.datetime.strptime(course.enrollment_start, datetime_format)
+    enrollment_start_str = enrollment_start.strftime(new_format)
+%>
   <%inherit file="../main.html" />
   <%block name="headextra">
     ## OG (Open Graph) title and description added below to give social media info to display
@@ -165,10 +173,14 @@
             <div class="">
               <div class="course-summary">
                 <dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-10 text-white sm:mt-20 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+                  % if course.enrollment_start:
                   <div class="flex flex-col gap-y-3 border-l border-white/10 pl-6">
-                    <dt class="text-sm leading-6">${_("Course Number")}</dt>
-                    <dd class="order-first text-3xl font-semibold tracking-tight course-number">${course.display_number_with_default}</dd>
+                    <dt class="text-sm leading-6">${_("شروع ثبت نام")}</dt>
+                    <dd class="order-first text-3xl font-semibold tracking-tight course-number">
+                      ${enrollment_start_str}
+                    </dd>
                   </div>
+                  % endif
                   
                   % if not course.start_date_is_still_default:
                   <% course_start_date=course.advertised_start or course.start %>
@@ -213,7 +225,6 @@
                     <dd class="order-first text-3xl font-semibold tracking-tight">${course_price}</dd>
                   </div>
                   %endif
-              
                   % if pre_requisite_courses:
                   <% prc_target=reverse('about_course', args=[text_type(pre_requisite_courses[0]['key'])]) %>
                   <div class="flex flex-col gap-y-3 border-l border-white/10 pl-6">
