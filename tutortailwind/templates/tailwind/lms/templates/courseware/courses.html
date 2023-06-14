@@ -31,6 +31,19 @@
 % endif
 
 <%block name="pagetitle">${_("Courses")}</%block>
+<%
+    def sort_courses(courses):
+        # Filter out ended courses
+        courses = [course for course in courses if not course.has_ended()]
+
+        # Sort courses by start date in descending order (i.e., most recent first)
+        courses.sort(key=lambda course: course.start, reverse=True)
+
+        return courses
+%>
+<%
+    sorted_courses = sort_courses(courses)
+%>
 
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="find-courses">
@@ -59,10 +72,7 @@
 
         <div class="courses${'' if course_discovery_enabled else ' no-course-discovery'}" role="region" aria-label="${_('List of Courses')}">
           <ul class="courses-listing courses-list">
-            %for course in courses:
-              % if course.has_ended():
-                <%continue %>
-              % endif
+            %for course in sorted_courses:
               <li class="courses-listing-item">
                 <%include file="../course.html" args="course=course" />
               </li>

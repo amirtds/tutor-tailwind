@@ -2,6 +2,19 @@
 <%namespace name='static' file='static_content.html'/>
 <%! from django.utils.translation import gettext as _ %>
 <%! from lms.djangoapps.courseware.courses import get_courses, sort_by_announcement, sort_by_start_date %>
+<%
+    def sort_courses(courses):
+        # Filter out ended courses
+        courses = [course for course in courses if not course.has_ended()]
+
+        # Sort courses by start date in descending order (i.e., most recent first)
+        courses.sort(key=lambda course: course.start, reverse=True)
+
+        return courses
+%>
+<%
+    sorted_courses = sort_courses(courses)
+%>
 
 % if settings.FEATURES.get('COURSES_ARE_BROWSABLE'):
 <div class="bg-white py-24 sm:py-32">
@@ -31,7 +44,7 @@
               </div>
         </div>
       <div class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-        %for course in sort_by_start_date(courses)[:homepage_course_max]:
+        %for course in sorted_courses[:homepage_course_max]:
             <%include file="course.html" args="course=course" />
         %endfor 
       </div>
