@@ -1233,6 +1233,10 @@ select {
   margin-bottom: 0.5rem !important;
 }
 
+.mb-20 {
+  margin-bottom: 5rem !important;
+}
+
 .mb-4 {
   margin-bottom: 1rem !important;
 }

@@ -47,7 +47,7 @@
 
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="find-courses">
-      <section class="courses-container">
+      <section class="courses-container mx-auto max-w-7xl px-6 lg:px-8">
         % if course_discovery_enabled:
         <div id="discovery-form" role="search" aria-label="course" class="wrapper-search-context">
           <div id="discovery-message" class="search-status-label"></div>
@@ -71,9 +71,9 @@
         % endif
 
         <div class="courses${'' if course_discovery_enabled else ' no-course-discovery'}" role="region" aria-label="${_('List of Courses')}">
-          <ul class="courses-listing courses-list">
+          <ul class="courses-listing courses-list mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
             %for course in sorted_courses:
-              <li class="courses-listing-item">
+              <li class="courses-listing-item w-full mb-20">
                 <%include file="../course.html" args="course=course" />
               </li>
             %endfor
