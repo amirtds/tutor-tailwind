@@ -25,13 +25,11 @@ a {
     color: #f1f5f9 !important;
 }
 
-@font-face {
-    font-family: 'BMitra';
-    src: url('/static/tailwind/fonts/BMitra.ttf') format('truetype');
-}
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
+
 
 * {
-    font-family: 'BMitra', sans-serif !important;
+    font-family: 'Vazirmatn', sans-serif !important;
 }
 
 .fa,
