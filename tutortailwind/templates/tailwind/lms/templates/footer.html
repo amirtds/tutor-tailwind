@@ -81,13 +81,32 @@ year = datetime.datetime.now().year
     </div>
 </footer>
 
-<div class="bg-gray-900 py-10 sm:py-10">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <div class="mx-auto max-w-2xl lg:max-w-none">
-      <h2 class="text-2xl font-semibold leading-8 text-white pt-4">${_("Powered By")}</h2>
-      <div class="mx-auto mt-10 grid grid-cols-4 items-start gap-x-8 gap-y-10 sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:grid-cols-5">
-        <img class="col-span-2 max-h-32 w-full object-contain object-left lg:col-span-1" src="https://files.edx.org/openedx-logos/open-edx-logo-tag-dark.png" alt="Transistor" width="175" height="70">
-      </div>
+<div class="bg-black">
+  <div class="
+      max-w-7xl
+      mx-auto
+      py-12
+      px-4
+      sm:px-6
+      md:flex md:items-center md:justify-between
+      lg:px-8
+    ">
+    <div class="flex justify-center space-x-6 md:order-2">
+      <a href="https://cubite.io" class="text-gray-400 hover:text-gray-500">
+        <span class="sr-only">Cubite</span>
+        <img class="h-16" src="https://cubite-assets.s3.fr-par.scw.cloud/website_logo_transparent_background.png" alt="cubite logo">
+      </a>
+  
+      <a href="https://open.edx.org" class="text-gray-400 hover:text-gray-500">
+        <span class="sr-only">Twitter</span>
+        <img class="h-16" src="https://files.edx.org/openedx-logos/open-edx-logo-tag-dark.png" alt="openedx logo">
+      </a>
+    </div>
+    <div class="mt-8 md:mt-0 md:order-1">
+      <p class="text-center text-base text-gray-400">
+        edX, Open edX and the edX and Open edX logos are trademarks or
+        registered trademarks of edX Inc.
+      </p>
     </div>
   </div>
-</div>
+  </div>
