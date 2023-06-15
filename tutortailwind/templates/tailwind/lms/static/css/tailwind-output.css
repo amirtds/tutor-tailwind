@@ -755,6 +755,14 @@ select {
   margin-bottom: 1rem !important;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem !important;
+}
+
+.mb-16 {
+  margin-bottom: 4rem !important;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem !important;
 }
@@ -775,6 +783,10 @@ select {
   margin-bottom: 2rem !important;
 }
 
+.ml-4 {
+  margin-left: 1rem !important;
+}
+
 .mt-10 {
   margin-top: 2.5rem !important;
 }
@@ -785,6 +797,18 @@ select {
 
 .mt-16 {
   margin-top: 4rem !important;
+}
+
+.mt-2 {
+  margin-top: 0.5rem !important;
+}
+
+.mt-20 {
+  margin-top: 5rem !important;
+}
+
+.mt-28 {
+  margin-top: 7rem !important;
 }
 
 .mt-4 {
@@ -1062,6 +1086,18 @@ select {
   border-top-width: 1px !important;
 }
 
+.border-t-2 {
+  border-top-width: 2px !important;
+}
+
+.border-t-8 {
+  border-top-width: 8px !important;
+}
+
+.border-dashed {
+  border-style: dashed !important;
+}
+
 .border-none {
   border-style: none !important;
 }
@@ -1077,6 +1113,11 @@ select {
 
 .border-gray-900\/5 {
   border-color: rgb(17 24 39 / 0.05) !important;
+}
+
+.border-sky-500 {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(14 165 233 / var(--tw-border-opacity)) !important;
 }
 
 .border-slate-800 {
@@ -1239,8 +1280,16 @@ select {
   padding-left: 1.5rem !important;
 }
 
+.pt-12 {
+  padding-top: 3rem !important;
+}
+
 .pt-16 {
   padding-top: 4rem !important;
+}
+
+.pt-20 {
+  padding-top: 5rem !important;
 }
 
 .pt-6 {
@@ -1253,6 +1302,10 @@ select {
 
 .text-center {
   text-align: center !important;
+}
+
+.text-justify {
+  text-align: justify !important;
 }
 
 .font-sans {
@@ -1325,6 +1378,10 @@ select {
 
 .leading-6 {
   line-height: 1.5rem !important;
+}
+
+.leading-7 {
+  line-height: 1.75rem !important;
 }
 
 .leading-8 {
@@ -1725,6 +1782,10 @@ select {
 }
 
 @media (min-width: 640px) {
+  .sm\:mb-20 {
+    margin-bottom: 5rem !important;
+  }
+
   .sm\:mt-20 {
     margin-top: 5rem !important;
   }
@@ -1867,10 +1928,6 @@ select {
     max-width: none !important;
   }
 
-  .lg\:max-w-xl {
-    max-width: 36rem !important;
-  }
-
   .lg\:shrink-0 {
     flex-shrink: 0 !important;
   }
@@ -1881,10 +1938,6 @@ select {
 
   .lg\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  }
-
-  .lg\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
   }
 
   .lg\:flex-row {
@@ -1933,6 +1986,10 @@ select {
 
   .xl\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  .xl\:grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
   }
 
   .xl\:gap-8 {

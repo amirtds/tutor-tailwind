@@ -47,3 +47,73 @@ a {
 #custom-course-about-section p {
     font-size: 1.25rem !important;
 }
+
+#course-about-section {
+    display: contents;
+    font-size: 1.25rem !important;
+}
+
+#course-syllabus-section {
+    display: contents;
+    font-size: 1.25rem !important;
+}
+
+#course-syllabus-section section {
+    padding: 20px 10px;
+    background: #0c4a6e;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    color:#e0f2fe;
+}
+
+
+#course-instructor-section .staff-bio {
+    font-weight: 700;
+    --tw-text-opacity: 1 !important;
+    color: rgb(209 213 219 / var(--tw-text-opacity)) !important;
+    line-height: 1.75rem !important;
+    font-size: 1rem !important;
+    margin-top: 1.5rem !important;
+}
+#course-instructor-section .staff-title {
+    font-size: 1rem/* 16px */ !important;
+    line-height: 1.5rem/* 24px */ !important;
+    line-height: 1.75rem/* 28px */ !important;
+    --tw-text-opacity: 1 !important;
+    color: rgb(156 163 175 / var(--tw-text-opacity)) !important;
+}
+
+#course-instructor-section .staff-name {
+    --tw-text-opacity: 1 !important;
+    color: rgb(209 213 219 / var(--tw-text-opacity)) !important;
+    letter-spacing: -0.025em !important;
+    line-height: 2rem/* 32px */ !important;
+    font-weight: 600 !important;
+    font-size: 1.125rem/* 18px */ !important;
+    line-height: 1.75rem/* 28px */ !important;    
+}
+#course-instructor-section {
+    margin-top: -3rem/* -48px */ !important;
+    --tw-space-y-reverse: 0 !important;
+    margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse))) !important;
+    margin-bottom: calc(3rem * var(--tw-space-y-reverse)) !important;
+    --tw-divide-y-reverse: 0 !important;
+    --tw-divide-opacity: 1 !important;
+    grid-column: span 3 / span 3 !important;
+}
+
+#course-instructor-section li {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2.5rem/* 40px */ !important;
+    padding-top: 3rem/* 48px */ !important;
+    flex-direction: row !important;
+}
+
+#course-instructor-section img {
+    aspect-ratio: 4/5 !important;
+    width: 13rem/* 208px */ !important;
+    flex: none !important;
+    border-radius: 1rem/* 16px */ !important;
+    object-fit: cover !important;    
+}
