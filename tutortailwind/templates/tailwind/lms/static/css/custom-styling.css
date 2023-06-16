@@ -107,7 +107,12 @@ a {
     flex-direction: column !important;
     gap: 2.5rem/* 40px */ !important;
     padding-top: 3rem/* 48px */ !important;
-    flex-direction: row !important;
+}
+
+@media (min-width: 640px) {
+    #course-instructor-section li {
+        flex-direction: row !important;
+    }
 }
 
 #course-instructor-section img {
