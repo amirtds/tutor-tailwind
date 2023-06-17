@@ -807,10 +807,6 @@ select {
   margin-top: 5rem !important;
 }
 
-.mt-28 {
-  margin-top: 7rem !important;
-}
-
 .mt-4 {
   margin-top: 1rem !important;
 }
@@ -1086,10 +1082,6 @@ select {
   border-top-width: 1px !important;
 }
 
-.border-t-2 {
-  border-top-width: 2px !important;
-}
-
 .border-t-8 {
   border-top-width: 8px !important;
 }
@@ -1286,10 +1278,6 @@ select {
 
 .pt-16 {
   padding-top: 4rem !important;
-}
-
-.pt-20 {
-  padding-top: 5rem !important;
 }
 
 .pt-6 {
@@ -1702,9 +1690,9 @@ select {
   background-color: rgb(249 250 251 / var(--tw-bg-opacity)) !important;
 }
 
-.hover\:scale-110:hover {
-  --tw-scale-x: 1.1 !important;
-  --tw-scale-y: 1.1 !important;
+.hover\:scale-105:hover {
+  --tw-scale-x: 1.05 !important;
+  --tw-scale-y: 1.05 !important;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
 }
 
@@ -1819,6 +1807,10 @@ select {
 
   .sm\:pt-24 {
     padding-top: 6rem !important;
+  }
+
+  .sm\:text-center {
+    text-align: center !important;
   }
 
   .sm\:text-4xl {
@@ -1986,10 +1978,6 @@ select {
 
   .xl\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-  }
-
-  .xl\:grid-cols-5 {
-    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
   }
 
   .xl\:gap-8 {

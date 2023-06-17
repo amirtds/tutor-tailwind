@@ -7,7 +7,7 @@ from six import text_type
 %>
 <%page args="course" expression_filter="h"/>
 
-<div class="flex flex-col items-start justify-between bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-110 hover:shadow-xl border border-gray-200 hover:border-sky-800 hover:border-4 hover:bg-gray-50 h-120">
+<div class="flex flex-col items-start justify-between bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl border border-gray-200 hover:border-sky-800 hover:border-4 hover:bg-gray-50 h-120">
   <a class="custom-anchor w-full" href="${reverse('about_course', args=[text_type(course.id)])}">
     <img class="w-full h-56 object-cover" src="${course.course_image_url}" alt="${course.display_name_with_default}">
     <div class="p-4 flex flex-col justify-between flex-grow">
