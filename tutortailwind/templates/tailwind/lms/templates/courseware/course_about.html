@@ -41,7 +41,7 @@
             }
           } else if (xhr.status == 403) {
             // redirect unauthenticated user to the login page
-            location.replace("${reverse('signin_user') | n, js_escaped_string}?next=" + encodeURIComponent("${request.path | n, js_escaped_string}"));
+            location.replace("${reverse('register_user') | n, js_escaped_string}?next=" + encodeURIComponent("${request.path | n, js_escaped_string}"));
           } else {
             $('#register_error').text(
               (xhr.responseText ? xhr.responseText : "${_("An error occurred.Please try again later.") | n, js_escaped_string}")
