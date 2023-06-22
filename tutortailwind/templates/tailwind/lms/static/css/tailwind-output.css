@@ -850,6 +850,10 @@ select {
   aspect-ratio: 16/9 !important;
 }
 
+.h-11 {
+  height: 2.75rem !important;
+}
+
 .h-12 {
   height: 3rem !important;
 }
@@ -872,10 +876,6 @@ select {
 
 .h-6 {
   height: 1.5rem !important;
-}
-
-.h-7 {
-  height: 1.75rem !important;
 }
 
 .h-\[0\.58em\] {
@@ -1807,10 +1807,6 @@ select {
 
   .sm\:pt-24 {
     padding-top: 6rem !important;
-  }
-
-  .sm\:text-center {
-    text-align: center !important;
   }
 
   .sm\:text-4xl {
