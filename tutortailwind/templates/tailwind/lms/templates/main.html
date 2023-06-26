@@ -229,6 +229,19 @@ from common.djangoapps.pipeline_mako import render_require_js_path_overrides
   % endfor
   % endif
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QPSD4QRG9B"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-QPSD4QRG9B'); </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var language = "fa-ir";
+        var cookieName = "openedx-language-preference";
+        var cookieValue = document.cookie.split('; ').find(row => row.startsWith(cookieName)).split('=')[1];
+        if (!cookieValue) {
+            document.cookie = cookieName + "=" + language + "; path=/; domain=.academix.iranacademia.com;";
+            location.reload();
+        }
+    });
+  </script>
+
+
 </body>
 </html>
 
