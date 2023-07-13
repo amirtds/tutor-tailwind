@@ -143,3 +143,8 @@ a {
 #course-instructor-section .staff-info {
     flex: 1 1 auto;
 }
+
+.global-header .header-logo a .logo {
+  height: 60px !important;
+  margin-bottom: 10px !important;
+}
