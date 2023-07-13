@@ -25,11 +25,11 @@ a {
     color: #f1f5f9 !important;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 
 * {
-    font-family: 'Vazirmatn', sans-serif !important;
+    font-family: 'Roboto', sans-serif !important;
 }
 
 .fa,
@@ -147,4 +147,8 @@ a {
 .global-header .header-logo a .logo {
   height: 60px !important;
   margin-bottom: 10px !important;
+}
+
+.global-header .nav-links .nav-item {
+  margin-top: 10px !important;
 }
