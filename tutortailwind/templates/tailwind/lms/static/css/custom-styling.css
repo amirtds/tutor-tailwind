@@ -152,3 +152,19 @@ a {
 .global-header .nav-links .nav-item {
   margin-top: 10px !important;
 }
+
+a:not(.btn), a:visited:not(.btn) {
+  color: #4d7c0f !important;
+}
+
+a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:visited:not(.btn):focus {
+  color: #65a30d !important;
+}
+
+.global-header .nav-links .secondary .btn {
+  border: none !important;
+}
+
+.global-header .nav-links .secondary a.sign-in-btn:hover, .global-header .nav-links .secondary .nav-item a.shopping-cart:hover {
+  border-color: #65a30d !important;
+}
