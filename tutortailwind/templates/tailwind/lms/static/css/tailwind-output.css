@@ -1107,7 +1107,7 @@ select {
   border-color: rgb(17 24 39 / 0.05) !important;
 }
 
-.border-sky-500 {
+.border-lime-500 {
   --tw-border-opacity: 1 !important;
   border-color: rgb(14 165 233 / var(--tw-border-opacity)) !important;
 }
@@ -1155,7 +1155,7 @@ select {
   background-color: rgb(34 197 94 / var(--tw-bg-opacity)) !important;
 }
 
-.bg-sky-600 {
+.bg-lime-600 {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(2 132 199 / var(--tw-bg-opacity)) !important;
 }
@@ -1424,7 +1424,7 @@ select {
   color: rgb(22 163 74 / var(--tw-text-opacity)) !important;
 }
 
-.text-sky-500 {
+.text-lime-500 {
   --tw-text-opacity: 1 !important;
   color: rgb(14 165 233 / var(--tw-text-opacity)) !important;
 }
@@ -1700,7 +1700,7 @@ select {
   border-width: 4px !important;
 }
 
-.hover\:border-sky-800:hover {
+.hover\:border-lime-800:hover {
   --tw-border-opacity: 1 !important;
   border-color: rgb(7 89 133 / var(--tw-border-opacity)) !important;
 }
@@ -1715,7 +1715,7 @@ select {
   background-color: rgb(220 252 231 / var(--tw-bg-opacity)) !important;
 }
 
-.hover\:bg-sky-700:hover {
+.hover\:bg-lime-700:hover {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(3 105 161 / var(--tw-bg-opacity)) !important;
 }
@@ -1747,7 +1747,7 @@ select {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000) !important;
 }
 
-.focus\:ring-sky-500:focus {
+.focus\:ring-lime-500:focus {
   --tw-ring-opacity: 1 !important;
   --tw-ring-color: rgb(14 165 233 / var(--tw-ring-opacity)) !important;
 }

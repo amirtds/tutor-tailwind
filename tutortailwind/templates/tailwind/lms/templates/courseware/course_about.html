@@ -107,7 +107,7 @@
                   <div class="main-cta">
                     %if user.is_authenticated and registered:
                       %if show_courseware_link:
-                        <a href="${course_target}" class="flex w-full items-center justify-center rounded-md border border-transparent bg-sky-600 px-8 py-3 text-base font-medium text-white hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-gray-50">
+                        <a href="${course_target}" class="flex w-full items-center justify-center rounded-md border border-transparent bg-lime-600 px-8 py-3 text-base font-medium text-white hover:bg-lime-700 focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2 focus:ring-offset-gray-50">
                           %endif
                           
                           %if show_courseware_link:
@@ -129,7 +129,7 @@
                     <span class="flex w-full items-center rounded-md border border-transparent px-2 py-3 text-base font-medium disabled">${_("Enrollment is Closed")}</span>
                     %elif allow_anonymous:
                       %if show_courseware_link:
-                      <a href="${course_target} flex w-full items-center justify-center rounded-md border border-transparent bg-sky-600 px-8 py-3 text-base font-medium text-white hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-gray-50">
+                      <a href="${course_target} flex w-full items-center justify-center rounded-md border border-transparent bg-lime-600 px-8 py-3 text-base font-medium text-white hover:bg-lime-700 focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2 focus:ring-offset-gray-50">
                         <strong>${_("View Course")}</strong>
                       </a>
                       %endif
@@ -145,7 +145,7 @@
                       else:
                           href_class = "register"
                     %>
-                    <a href="${reg_href}" class="${href_class} flex w-full items-center justify-center rounded-md border border-transparent bg-sky-600 px-8 py-3 text-base font-medium text-white hover:bg-sky-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-gray-50">
+                    <a href="${reg_href}" class="${href_class} flex w-full items-center justify-center rounded-md border border-transparent bg-lime-600 px-8 py-3 text-base font-medium text-white hover:bg-lime-700 focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2 focus:ring-offset-gray-50">
                       ${_("Enroll Now")}
                     </a>
                     <div id="register_error"></div>
