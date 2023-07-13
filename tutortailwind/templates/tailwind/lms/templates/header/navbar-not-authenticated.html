@@ -30,7 +30,7 @@ from openedx.core.djangoapps.user_authn.toggles import should_redirect_to_authn_
     </div>
     % if courses_are_browsable:
       <div class="mobile-nav-item hidden-mobile nav-item">
-        <a href="${marketing_link('COURSES')}">جستجو دوره های آموزشی</a>
+        <a href="${marketing_link('COURSES')}">${_("Find Courses")}</a>
       </div>
     % endif
     <div class="mobile-nav-item hidden-mobile nav-item">
@@ -40,7 +40,7 @@ from openedx.core.djangoapps.user_authn.toggles import should_redirect_to_authn_
   % if allows_login:
     % if can_discover_courses:
       <div class="mobile-nav-item hidden-mobile nav-item">
-        <a href="/courses">جستجو دوره های آموزشی</a>
+        <a href="/courses">${_("Find Courses")}</a>
       </div>
     %endif
   % endif
