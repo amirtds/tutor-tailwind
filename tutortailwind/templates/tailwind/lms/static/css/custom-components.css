@@ -26,3 +26,7 @@
 .button-secondary-rounded {
     @apply !rounded-full !bg-white !px-4 !py-2.5 !text-base !font-semibold !text-gray-900 !shadow-sm !ring-1 !ring-inset !ring-gray-300 hover:!bg-gray-50
 }
+
+.button-header {
+    @apply !text-[#004f5d] !bg-white !px-4 !py-2.5 !text-base !font-semibold
+}
