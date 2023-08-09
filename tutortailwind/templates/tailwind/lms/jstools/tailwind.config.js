@@ -13,7 +13,8 @@ module.exports = {
         '120': '30rem',
       },
       colors: {
-        lime: {
+        jescolor: {
+          50:  '#E0F2C2',
           100: '#E0F2C2',
           200: '#C9E59B',
           300: '#B2D874',
