@@ -154,11 +154,11 @@ a {
 }
 
 a:not(.btn), a:visited:not(.btn) {
-  color: #4d7c0f !important;
+  color: #004f5d !important;
 }
 
 a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:visited:not(.btn):focus {
-  color: #65a30d !important;
+  color: #004f5d !important;
 }
 
 .global-header .nav-links .secondary .btn {
@@ -166,5 +166,5 @@ a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:visited:not(.
 }
 
 .global-header .nav-links .secondary a.sign-in-btn:hover, .global-header .nav-links .secondary .nav-item a.shopping-cart:hover {
-  border-color: #65a30d !important;
+  border-color: #004f5d !important;
 }

@@ -38,3 +38,11 @@
 .main-footer {
     @apply !bg-[#004f5d]
 }
+
+.about-us {
+    @apply !bg-[#eef2ff]
+}
+
+.about-us-text {
+    @apply !text-[#004f5d]
+}
