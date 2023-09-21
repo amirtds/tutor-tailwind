@@ -30,3 +30,11 @@
 .button-header {
     @apply !text-[#004f5d] !bg-white !px-4 !py-2.5 !text-base !font-semibold
 }
+
+.footer-link {
+    @apply !text-white !font-semibold hover:!text-gray-100 
+}
+
+.main-footer {
+    @apply !bg-[#004f5d]
+}
