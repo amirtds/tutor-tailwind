@@ -153,18 +153,19 @@ a {
   margin-top: 10px !important;
 }
 
-a:not(.btn), a:visited:not(.btn) {
-  color: #004f5d !important;
-}
-
-a:not(.btn):hover, a:not(.btn):focus, a:visited:not(.btn):hover, a:visited:not(.btn):focus {
-  color: #004f5d !important;
-}
-
 .global-header .nav-links .secondary .btn {
   border: none !important;
 }
 
 .global-header .nav-links .secondary a.sign-in-btn:hover, .global-header .nav-links .secondary .nav-item a.shopping-cart:hover {
   border-color: #004f5d !important;
+}
+
+.cc-btn {
+  color: #fff !important
+}
+
+.cc-link {
+  color: #e5e7eb !important;
+  text-decoration: underline !important;
 }

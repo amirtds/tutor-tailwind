@@ -7,9 +7,10 @@ from six import text_type
 %>
 <%page args="course" expression_filter="h"/>
 
-<div class="flex flex-col items-start justify-between bg-white rounded-lg shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl border border-gray-200 hover:border-jescolor-800 hover:border-4 hover:bg-gray-50 h-120">
+<div class="relative flex flex-col items-start justify-between bg-white shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl border-b-4 border-sky-900 hover:bg-gray-50 h-full">
   <a class="custom-anchor w-full" href="${reverse('about_course', args=[text_type(course.id)])}">
-    <img class="w-full h-56 object-cover" src="${course.course_image_url}" alt="${course.display_name_with_default}">
+    <div class="absolute top-0 left-0 bg-opacity-75 bg-gray-300 text-sky-900 px-4 py-2 font-semibold text-sm">Canada</div>
+    <img class="w-full h-56" src="${course.course_image_url}" alt="${course.display_name_with_default}">
     <div class="p-4 flex flex-col justify-between flex-grow">
         <%
         if course.start is not None:
@@ -17,10 +18,12 @@ from six import text_type
         else:
             course_date_string = ''
         %>
-      <h3 class="text-lg font-black text-gray-800 mb-2">${course.display_name_with_default}</h3>
+      <h3 class="text-lg font-black text-sky-900 mb-2">${course.display_name_with_default}</h3>
       % if course.short_description:
-        <p class="py-2 text-gray-900 description line-clamp-3 overflow-ellipsis overflow-hidden text-md leading-loose">${course.short_description if course.short_description else 'No course description available.'}</p>
+        <p class="py-2 text-sky-800 description line-clamp-3 overflow-ellipsis overflow-hidden text-md leading-loose">${course.short_description if course.short_description else 'No course description available.'}</p>
       % endif
+      <h3 class="text-base font-semibold text-sky-900 mb-2">${_("Language")}: </h3>
+      <h3 class="text-base font-semibold text-sky-900 mb-2">${_("Access")}: </h3>
     </div>
   </a>
 </div>

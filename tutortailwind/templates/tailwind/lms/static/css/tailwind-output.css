@@ -728,10 +728,6 @@ select {
   top: 0px !important;
 }
 
-.top-1\/2 {
-  top: 50% !important;
-}
-
 .isolate {
   isolation: isolate !important;
 }
@@ -871,10 +867,6 @@ select {
   height: 3rem !important;
 }
 
-.h-120 {
-  height: 30rem !important;
-}
-
 .h-16 {
   height: 4rem !important;
 }
@@ -885,10 +877,6 @@ select {
 
 .h-56 {
   height: 14rem !important;
-}
-
-.h-\[1em\] {
-  height: 1em !important;
 }
 
 .h-\[50rem\] {
@@ -1084,6 +1072,10 @@ select {
   border-bottom-width: 2px !important;
 }
 
+.border-b-4 {
+  border-bottom-width: 4px !important;
+}
+
 .border-l {
   border-left-width: 1px !important;
 }
@@ -1109,6 +1101,11 @@ select {
   border-color: rgb(17 24 39 / 0.05) !important;
 }
 
+.border-sky-900 {
+  --tw-border-opacity: 1 !important;
+  border-color: rgb(12 74 110 / var(--tw-border-opacity)) !important;
+}
+
 .border-slate-800 {
   --tw-border-opacity: 1 !important;
   border-color: rgb(30 41 59 / var(--tw-border-opacity)) !important;
@@ -1130,6 +1127,11 @@ select {
 .bg-gray-200 {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity)) !important;
+}
+
+.bg-gray-300 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity)) !important;
 }
 
 .bg-gray-50 {
@@ -1162,6 +1164,11 @@ select {
   background-color: rgb(90 140 52 / var(--tw-bg-opacity)) !important;
 }
 
+.bg-jescolor-900 {
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(0 79 93 / var(--tw-bg-opacity)) !important;
+}
+
 .bg-white {
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity)) !important;
@@ -1171,12 +1178,12 @@ select {
   --tw-bg-opacity: 0.5 !important;
 }
 
-.bg-\[radial-gradient\(50\%_100\%_at_top\2c theme\(colors\.indigo\.100\)\2c white\)\] {
-  background-image: radial-gradient(50% 100% at top,#e0e7ff,white) !important;
+.bg-opacity-75 {
+  --tw-bg-opacity: 0.75 !important;
 }
 
-.fill-jescolor-400 {
-  fill: #9BCB4D !important;
+.bg-\[radial-gradient\(50\%_100\%_at_top\2c theme\(colors\.indigo\.100\)\2c white\)\] {
+  background-image: radial-gradient(50% 100% at top,#e0e7ff,white) !important;
 }
 
 .object-cover {
@@ -1398,11 +1405,6 @@ select {
   color: rgb(75 85 99 / var(--tw-text-opacity)) !important;
 }
 
-.text-gray-800 {
-  --tw-text-opacity: 1 !important;
-  color: rgb(31 41 55 / var(--tw-text-opacity)) !important;
-}
-
 .text-gray-900 {
   --tw-text-opacity: 1 !important;
   color: rgb(17 24 39 / var(--tw-text-opacity)) !important;
@@ -1421,6 +1423,16 @@ select {
 .text-jescolor-600 {
   --tw-text-opacity: 1 !important;
   color: rgb(90 140 52 / var(--tw-text-opacity)) !important;
+}
+
+.text-sky-800 {
+  --tw-text-opacity: 1 !important;
+  color: rgb(7 89 133 / var(--tw-text-opacity)) !important;
+}
+
+.text-sky-900 {
+  --tw-text-opacity: 1 !important;
+  color: rgb(12 74 110 / var(--tw-text-opacity)) !important;
 }
 
 .text-slate-700 {
@@ -1515,7 +1527,7 @@ select {
 .button-primary {
   border-radius: 0.375rem !important;
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(90 140 52 / var(--tw-bg-opacity)) !important;
+  background-color: rgb(8 47 73 / var(--tw-bg-opacity)) !important;
   padding-left: 0.875rem !important;
   padding-right: 0.875rem !important;
   padding-top: 0.625rem !important;
@@ -1532,14 +1544,14 @@ select {
 
 .button-primary:hover {
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(108 169 61 / var(--tw-bg-opacity)) !important;
+  background-color: rgb(7 89 133 / var(--tw-bg-opacity)) !important;
 }
 
 .button-primary:focus-visible {
   outline-style: solid !important;
   outline-width: 2px !important;
   outline-offset: 2px !important;
-  outline-color: #5A8C34 !important;
+  outline-color: #0c4a6e !important;
 }
 
 .button-secondary {
@@ -1748,15 +1760,6 @@ select {
   --tw-scale-x: 1.05 !important;
   --tw-scale-y: 1.05 !important;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
-}
-
-.hover\:border-4:hover {
-  border-width: 4px !important;
-}
-
-.hover\:border-jescolor-800:hover {
-  --tw-border-opacity: 1 !important;
-  border-color: rgb(54 82 34 / var(--tw-border-opacity)) !important;
 }
 
 .hover\:bg-gray-50:hover {
