@@ -34,15 +34,3 @@
 .footer-link {
     @apply !text-white !font-semibold hover:!text-gray-100 
 }
-
-.main-footer {
-    @apply !bg-[#004f5d]
-}
-
-.about-us {
-    @apply !bg-[#eef2ff]
-}
-
-.about-us-text {
-    @apply !text-[#004f5d]
-}

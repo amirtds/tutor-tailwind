@@ -3,27 +3,125 @@
   from django.utils.translation import gettext as _
 %>
 
-<div class="relative isolate overflow-hidden bg-gray-900" style="background-color: #0c3c59 !important;">
-    <div class="px-6 py-24 sm:px-6 sm:py-32 lg:px-8">
-      <div class="mx-auto max-w-3xl text-center" style="
-            width: 100%;
-            height: 100%;
-            background-color: rgb(17, 87, 127);
-            border: 1px solid rgb(128, 211, 240);
-            border-radius: 8px;
-            padding: 3rem;
-        ">
-        <h1 class="mx-auto max-w-4xl font-display text-4xl font-medium tracking-tight text-white sm:text-6xl">
-          Welcome to
-          <span class="relative whitespace-nowrap text-jescolor-600">
-            <span class="relative text-jescolor-500">JESed</span>
-          </span>
-        </h1>        
-        <p class="mx-auto mt-6 max-w-xl text-2xl leading-8 text-gray-300">${_("Welcome to JESed")}</p>
-        <div class="mt-10 flex items-center justify-center gap-x-6">
-          <a href="/login" class="button-primary-dark text-lg">${_("Sign In")}</a>
-          <a href="/courses" class="button-secondary-dark text-lg">${_("Courses")}</a>
+<div class="relative">
+    <div class="mx-auto max-w-7xl bg-white">
+        <div class="relative isolate">
+            <svg class="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]" aria-hidden="true">
+            <defs>
+                <pattern id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527" width="200" height="200" x="50%" y="-1" patternUnits="userSpaceOnUse">
+                <path d="M100 200V.5M.5 .5H200" fill="none" />
+                </pattern>
+            </defs>
+            <svg x="50%" y="-1" class="overflow-visible fill-gray-50">
+                <path d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z" stroke-width="0" />
+            </svg>
+            <rect width="100%" height="100%" stroke-width="0" fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)" />
+            </svg>
+            <div class="mx-auto max-w-7xl px-6 py-24 lg:flex lg:items-center lg:gap-x-10 lg:px-8">
+            <div class="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
+                <h1 class="mt-10 max-w-lg text-4xl font-bold tracking-tight text-[#004f5d] sm:text-6xl">Welcome to JESed</h1>
+                <p class="mt-6 text-xl font-semibold leading-8 text-[#004f5d]">Explore a diverse range of professional courses developed and led by justice experts.</p>
+            </div>
+            <div class="mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
+                <img src='/static/tailwind/images/hero.png' alt="" />
+            </div>
+            </div>
         </div>
+    </div>
+
+    <div class="bg-[#6CA93D] py-24">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+            <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+            <div>
+                <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Course Topics</p>
+                <p class="mt-6 text-base leading-7 text-white">Browse All</p>
+            </div>
+            <dl class="col-span-2 grid grid-cols-1 gap-x-8 gap-y-4 text-base leading-7 text-gray-600 sm:grid-cols-2">
+                <div class="relative pl-9">
+                    <dt class="font-semibold course-category">
+                        <a href="#" class="underline text-white">Human Rights</a>
+                    </dt>
+                </div>
+                <div class="relative pl-9">
+                    <dt class="font-semibold course-category">
+                        <a href="#" class="underline text-white">Access to Justice</a>
+                    </dt>
+                </div>
+                <div class="relative pl-9">
+                    <dt class="font-semibold course-category">
+                        <a href="#" class="underline text-white">Human Trafficking</a>
+                    </dt>
+                </div>
+                <div class="relative pl-9">
+                    <dt class="font-semibold course-category">
+                        <a href="#" class="underline text-white">Judicial Education and Training</a>
+                    </dt>
+                </div>
+                <div class="relative pl-9">
+                    <dt class="font-semibold course-category">
+                        <a href="#" class="underline text-white">Law Enforcement and Investigation</a>
+                    </dt>
+                </div>
+                <div class="relative pl-9">
+                    <dt class="font-semibold course-category">
+                        <a href="#" class="underline text-white">Intelligence Analysis and Security</a>
+                    </dt>
+                </div>
+            </dl>
+            </div>
+        </div>
+        </div>
+
+  <div class="absolute left-[-255px] bottom-28" style="width: 453px ; height: 25rem; background: url('/static/tailwind/images/Intersection.svg') left center no-repeat;"></div>
+</div>
+
+<!-- Who we are -->
+<div class="bg-white py-24 sm:py-32">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+        <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
+                </svg>
+              </div>
+              We Listen
+            </dt>
+          </div>
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                </svg>
+              </div>
+              We Collaborate
+            </dt>
+          </div>
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                </svg>
+              </div>
+              We Deliver
+            </dt>
+          </div>
+          <div class="relative pl-16">
+            <dt class="text-base font-semibold leading-7 text-gray-900">
+              <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33" />
+                </svg>
+              </div>
+              Advanced security
+            </dt>
+            <dd class="mt-2 text-base leading-7 text-gray-600">Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt mattis aliquet hac quis. Id hac maecenas ac donec pharetra eget.</dd>
+          </div>
+        </dl>
       </div>
     </div>
-</div>
+  </div>

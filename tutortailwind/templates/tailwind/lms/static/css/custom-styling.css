@@ -169,3 +169,12 @@ a {
   color: #e5e7eb !important;
   text-decoration: underline !important;
 }
+
+.contact-us {
+  background: #6CA93D url(/static/tailwind/images/map-Intersection.svg) no-repeat center !important;
+}
+
+.course-category::before {
+  content: "• ";
+  color: #fff;
+}

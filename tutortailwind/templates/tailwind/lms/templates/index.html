@@ -10,26 +10,8 @@ from openedx.core.djangolib.markup import HTML, Text
 
 <main id="main" aria-label="Content" tabindex="-1">
     <section class="home">
-      <header>
-        <div class="">
-          <div class="">
-            <div class="heading-group">
-              % if homepage_overlay_html:
-                ${homepage_overlay_html | n, decode.utf8}
-              % else:
-                <%include file="index_overlay.html" />
-              % endif
-            </div>
-          </div>
-
-          <%include file="index_promo_video.html" />
-        </div>
-
-      </header>
-      <%include file="${courses_list}" />
-      <!-- Features Section -->
-      <!-- End of Features Section -->      
-
+      <%include file="index_overlay.html" />
+      <%include file="${courses_list}" />   
     </section>
 </main>
 
@@ -42,79 +24,58 @@ from openedx.core.djangolib.markup import HTML, Text
 % endif
 
 <!-- About us section -->
-<section class="isolate overflow-hidden about-us px-6 lg:px-8">
-  <div class="relative mx-auto max-w-2xl py-24 sm:py-32 lg:max-w-4xl">
+<section class="isolate overflow-hidden !bg-[#eef2ff] px-6 lg:px-8">
+  <div class="relative mx-auto max-w-2xl py-12 lg:max-w-4xl">
     <div class="absolute left-1/2 top-0 -z-10 h-[50rem] w-[90rem] -translate-x-1/2 bg-[radial-gradient(50%_100%_at_top,theme(colors.indigo.100),white)] opacity-20 lg:left-36"></div>
     <div class="absolute inset-y-0 right-1/2 -z-10 mr-12 w-[150vw] origin-bottom-left skew-x-[-30deg] about-us shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-20 md:mr-0 lg:right-full lg:-mr-36 lg:origin-center"></div>
     <figure class="grid grid-cols-1 items-center gap-x-6 gap-y-8 lg:gap-x-10">
       <div class="relative col-span-2 lg:col-start-1 lg:row-start-2">
-          <p class="text-xl leading-8 text-gray-900 sm:text-xl sm:leading-9 pb-2 about-us-text">Internationally, JES has programs in Guatemala, El Salvador, Honduras, Panama and Guyana, working with national institutions to strengthen justice systems, improve citizen security and increase access to justice. For more information about JES, please visit:</p>
-          <a class="underline font-semibold" href="https://www.JusticeEducation.ca">www.JusticeEducation.ca</a>
+          <p class="text-xl leading-8 sm:text-xl sm:leading-9 pb-2 about-us-text text-[#004F5D]">Internationally, JES has programs in Guatemala, El Salvador, Honduras, Panama and Guyana, working with national institutions to strengthen justice systems, improve citizen security and increase access to justice.</p>
+          <p class="text-xl leading-8 sm:text-xl sm:leading-9 pb-2 about-us-text text-[#004F5D]">For more information about JES, please visit: <a class="underline font-semibold text-[#004F5D]" href="https://www.JusticeEducation.ca">www.JusticeEducation.ca</a>
+          </p>
         </div>
-      <div class="col-end-1 w-16 lg:row-span-4 lg:w-72">
+      <div class="col-end-1 w-16 lg:row-span-4 lg:w-72 h-full">
         <img class="rounded-xl bg-indigo-50 lg:rounded-3xl" src="/static/tailwind/images/about_jes.png" alt="">
       </div>
   </div>
 </section>
 
 <!-- Contact us section -->
-<div class="bg-gray-900 py-24 sm:py-32">
+<div class="contact-us">
   <div class="relative isolate">
-    <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
-      <div class="mx-auto flex max-w-2xl flex-col gap-16 bg-white/5 px-6 py-16 ring-1 ring-white/10 sm:rounded-3xl sm:p-8 lg:mx-0 lg:max-w-none lg:flex-row lg:items-center lg:py-20 xl:gap-x-20 xl:px-20">
-        <img class="h-96 w-full flex-none rounded-2xl object-cover shadow-xl lg:aspect-square lg:h-auto lg:max-w-sm" src="https://images.unsplash.com/photo-1519338381761-c7523edc1f46?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="">
-        <div class="w-full flex-auto">
-          <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Join our team</h2>
-          <p class="mt-6 text-lg leading-8 text-gray-300">Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.</p>
-          <ul role="list" class="mt-10 grid grid-cols-1 gap-x-8 gap-y-3 text-base leading-7 text-white sm:grid-cols-2">
-            <li class="flex gap-x-3">
-              <svg class="h-7 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              Competitive salaries
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="h-7 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              Flexible work hours
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="h-7 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              30 days of paid vacation
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="h-7 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              Annual team retreats
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="h-7 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              Benefits for you and your family
-            </li>
-            <li class="flex gap-x-3">
-              <svg class="h-7 w-5 flex-none" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
-              </svg>
-              A great work environment
-            </li>
-          </ul>
-          <div class="mt-10 flex">
-            <a href="#" class="text-sm font-semibold leading-6 text-indigo-400">See our job postings <span aria-hidden="true">&rarr;</span></a>
+    <div class="mx-auto max-w-7xl sm:px-6 lg:px-8 py-24">
+      <div class="mx-auto flex flex-col md:flex-row max-w-2xl bg-white px-6 py-16 ring-1 ring-white sm:p-8 lg:mx-0 lg:max-w-none lg:items-start lg:py-20 xl:gap-x-20 xl:px-20 gap-y-16 md:gap-y-0">
+        <div class="flex flex-col items-start md:w-2/5">
+          <img class="w-64 mb-4" src="https://justiceeducation.ca/sites/default/files/inline-images/JES-Tagline_RGB.png" alt="">
+          <p class="text-lg text-left font-bold text-[#004F5D] mb-4">Justice Education Society</p>
+          <a href="https://justiceeducation.ca/contact-us" class="text-[#004F5D] font-bold underline text-left">Contact Us</a>
+        </div>
+        <div class="md:w-4/5 flex-auto">
+          <h2 class="text-3xl font-bold tracking-tight text-[#004F5D] sm:text-4xl mb-6">Connect With Us</h2>
+          <p class="text-lg leading-8 text-[#004F5D] mb-6">We value getting connected and staying connected with our global network. Follow us now—stay engaged with our latest news and find out what impacts we’re bringing into your community.</p>
+          <div class="flex space-x-4 justify-center">
+            <a href="https://www.facebook.com/JusticeEducation" class="bg-[#6CA93D] text-white rounded-full py-2 px-4 hover:bg-[#004F5D]">
+              <i class="icon fa fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com/JusticeEd" class="bg-[#6CA93D] text-white rounded-full py-2 px-4 hover:bg-[#004F5D]">
+              <i class="icon fa fa-twitter"></i>
+            </a>
+            <a href="https://www.instagram.com/justiceeducation/" class="bg-[#6CA93D] text-white rounded-full py-2 px-4 hover:bg-[#004F5D]">
+              <i class="icon fa fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/justiceeducation" class="bg-[#6CA93D] text-white rounded-full py-2 px-4 hover:bg-[#004F5D]">
+              <i class="icon fa fa-linkedin"></i>
+            </a>
+            <a href="https://www.youtube.com/user/JusticeEducationBC" class="bg-[#6CA93D] text-white rounded-full py-2 px-4 hover:bg-[#004F5D]">
+              <i class="icon fa fa-youtube"></i>
+            </a>
           </div>
         </div>
       </div>
     </div>
-    <div class="absolute inset-x-0 -top-16 -z-10 flex transform-gpu justify-center overflow-hidden blur-3xl" aria-hidden="true">
-      <div class="aspect-[1318/752] w-[82.375rem] flex-none bg-gradient-to-r from-[#80caff] to-[#4f46e5] opacity-25" style="clip-path: polygon(73.6% 51.7%, 91.7% 11.8%, 100% 46.4%, 97.4% 82.2%, 92.5% 84.9%, 75.7% 64%, 55.3% 47.5%, 46.5% 49.4%, 45% 62.9%, 50.3% 87.2%, 21.3% 64.1%, 0.1% 100%, 5.4% 51.1%, 21.4% 63.9%, 58.9% 0.2%, 73.6% 51.7%)"></div>
-    </div>
   </div>
 </div>
+
 
 
 <%block name="js_extra">
