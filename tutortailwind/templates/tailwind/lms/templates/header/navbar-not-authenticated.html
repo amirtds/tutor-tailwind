@@ -57,6 +57,11 @@ from openedx.core.djangoapps.user_authn.toggles import should_redirect_to_authn_
           </div>
         % endif
       % endif
+      <div class="mobile-nav-item hidden-mobile nav-item">
+        <a class="sign-in-btn btn button-header" href="https://justiceeducation.ca/who-we-are">${_("About")}
+          <img class="" src="/static/tailwind/images/about-jes.png" alt="about jes" style="max-width: 40px;display: revert;" />
+        </a>
+      </div>
     </div>
   </div>
 </nav>
