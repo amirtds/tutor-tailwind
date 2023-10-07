@@ -30,8 +30,8 @@ from openedx.core.djangolib.markup import HTML, Text
     <div class="absolute inset-y-0 right-1/2 -z-10 mr-12 w-[150vw] origin-bottom-left skew-x-[-30deg] about-us shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-20 md:mr-0 lg:right-full lg:-mr-36 lg:origin-center"></div>
     <figure class="grid grid-cols-1 items-center gap-x-6 gap-y-8 lg:gap-x-10">
       <div class="relative col-span-2 lg:col-start-1 lg:row-start-2">
-          <p class="text-xl leading-8 sm:text-xl sm:leading-9 pb-2 about-us-text text-[#004F5D]">Internationally, JES has programs in Guatemala, El Salvador, Honduras, Panama and Guyana, working with national institutions to strengthen justice systems, improve citizen security and increase access to justice.</p>
-          <p class="text-xl leading-8 sm:text-xl sm:leading-9 pb-2 about-us-text text-[#004F5D]">For more information about JES, please visit: <a class="underline font-semibold text-[#004F5D]" href="https://www.JusticeEducation.ca">www.JusticeEducation.ca</a>
+          <p class="text-xl leading-8 sm:text-xl sm:leading-9 pb-2 about-us-text text-[#004F5D]">${_("Internationally, JES has programs in Guatemala, El Salvador, Honduras, Panama and Guyana, working with national institutions to strengthen justice systems, improve citizen security and increase access to justice.")}</p>
+          <p class="text-xl leading-8 sm:text-xl sm:leading-9 pb-2 about-us-text text-[#004F5D]">${_("For more information about JES, please visit")}: <a class="underline font-semibold text-[#004F5D]" href="https://www.JusticeEducation.ca">www.JusticeEducation.ca</a>
           </p>
         </div>
       <div class="col-end-1 w-16 lg:row-span-4 lg:w-72 h-full">
@@ -47,12 +47,12 @@ from openedx.core.djangolib.markup import HTML, Text
       <div class="mx-auto flex flex-col md:flex-row max-w-2xl bg-white px-6 py-16 ring-1 ring-white sm:p-8 lg:mx-0 lg:max-w-none lg:items-start lg:py-20 xl:gap-x-20 xl:px-20 gap-y-16 md:gap-y-0">
         <div class="flex flex-col items-start md:w-2/5">
           <img class="w-64 mb-4" src="https://justiceeducation.ca/sites/default/files/inline-images/JES-Tagline_RGB.png" alt="">
-          <p class="text-lg text-left font-bold text-[#004F5D] mb-4">Justice Education Society</p>
-          <a href="https://justiceeducation.ca/contact-us" class="text-[#004F5D] font-bold underline text-left">Contact Us</a>
+          <p class="text-lg text-left font-bold text-[#004F5D] mb-4">${_("Justice Education Society")}</p>
+          <a href="https://justiceeducation.ca/contact-us" class="text-[#004F5D] font-bold underline text-left">${_("Contact Us")}</a>
         </div>
         <div class="md:w-4/5 flex-auto">
-          <h2 class="text-3xl font-bold tracking-tight text-[#004F5D] sm:text-4xl mb-6">Connect With Us</h2>
-          <p class="text-lg leading-8 text-[#004F5D] mb-6">We value getting connected and staying connected with our global network. Follow us now—stay engaged with our latest news and find out what impacts we’re bringing into your community.</p>
+          <h2 class="text-3xl font-bold tracking-tight text-[#004F5D] sm:text-4xl mb-6">${_("Connect With Us")}</h2>
+          <p class="text-lg leading-8 text-[#004F5D] mb-6">${_("We value getting connected and staying connected with our global network. Follow us now—stay engaged with our latest news and find out what impacts we’re bringing into your community")}</p>
           <div class="flex space-x-4 justify-center">
             <a href="https://www.facebook.com/JusticeEducation" class="bg-[#6CA93D] text-white rounded-full py-2 px-4 hover:bg-[#004F5D]">
               <i class="icon fa fa-facebook-f"></i>

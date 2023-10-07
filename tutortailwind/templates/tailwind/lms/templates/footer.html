@@ -18,14 +18,14 @@ year = datetime.datetime.now().year
   <div class="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
     <div class="flex justify-center space-x-6 md:order-2">
       <a href="https://justiceeducation.ca/privacy-policy-terms-use#terms-of-use">
-        <span class="footer-link">Terms of Service</span>
+        <span class="footer-link">${_("Terms of Service")}</span>
       </a>
       <a href="https://justiceeducation.ca/privacy-policy-terms-use">
-        <span class="footer-link">Privacy Policy</span>
+        <span class="footer-link">${_("Privacy Policy")}</span>
       </a>
     </div>
     <div class="mt-8 md:order-1 md:mt-0">
-      <p class="text-center text-xl font-semibold leading-5 text-white">&copy; Copyright ${year} Justice Education Society of BC</p>
+      <p class="text-center text-xl font-semibold leading-5 text-white">&copy; ${_("Copyright")} ${year} ${_("Justice Education Society of BC")}</p>
     </div>
   </div>
 </footer>
@@ -53,7 +53,7 @@ year = datetime.datetime.now().year
     </div>
     <div class="mt-8 md:mt-0 md:order-1">
       <p class="text-center text-base text-gray-400">
-        edX and Open edX are registered trademarks of edX LLC. All Rights Reserved.
+        ${_("edX and Open edX are registered trademarks of edX LLC. All Rights Reserved.")}
       </p>
     </div>
   </div>
