@@ -1,16 +1,16 @@
 <%page expression_filter="h"/>
 <%namespace name='static' file='/static_content.html'/>
-<%! from django.utils.translation import gettext as _%>
+<%! from django.utils.translation import ugettext as _%>
 
 <%
 # set doc language direction
 from django.utils.translation import get_language_bidi
-dir_rtl = 'ltr' if get_language_bidi() else 'ltr'
+dir_rtl = 'rtl' if get_language_bidi() else 'ltr'
 course_mode_class = course_mode if course_mode else ''
 %>
 
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="${LANGUAGE_CODE}">
 <head dir="${dir_rtl}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -19,18 +19,131 @@ course_mode_class = course_mode if course_mode else ''
     <title>${document_title}</title>
 
     <%static:css group='style-certificates'/>
-
-    <% ga_4_id = static.get_value("GOOGLE_ANALYTICS_4_ID", settings.GOOGLE_ANALYTICS_4_ID) %>
-    % if ga_4_id:
-        <script async src="https://www.googletagmanager.com/gtag/js?id=${ga_4_id}"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', '${ga_4_id | n, js_escaped_string}');
-        </script>
-    % endif
+    <style>
+        div, p, span, h1, h2, h3, li {
+            font-family: Arial, Helvetica, sans-serif !important;
+            line-height: 1.2;
+        }
+        .layout-accomplishment.certificate-honor .accomplishment-rendering .accomplishment-type-symbol, .layout-accomplishment.certificate-honor .accomplishment-rendering .accomplishment-signatories .signatory-signature {
+            display: block;
+        }
+        .accomplishment-rendering {
+            border: none !important;
+            background: #FAF9F7 !important;
+            padding: 0 !important;
+            background-image: url("/static/tailwind/images/cert_bg.png") !important;
+            background-size: cover !important;
+            max-width: 900px !important;
+            display: block !important;
+        }
+        .accomplishment-rendering .accomplishment-type{
+            margin-top: -25px !important;
+            margin-bottom: 0px !important;
+        }
+        .layout-accomplishment .accomplishment-rendering .accomplishment-recipient {
+            text-transform: capitalize;
+        }
+        .layout-accomplishment .accomplishment-rendering {
+            min-height: 700px;
+        }
+        .accomplishment-rendering .accomplishment-type-symbol {
+            margin-bottom: 0px !important;
+        }
+        .layout-accomplishment .accomplishment-signatories .signatory .signatory-signature {
+            height: 80px;
+            margin-bottom: 0px;
+            margin-top: -5px;
+        }
+        .accomplishment-type-label.hd-3 {
+            text-transform: capitalize;
+            font-size: 26px;
+            color: #626262 !important;
+            font-weight: 900;
+            margin-bottom: 24px;
+        }
+        .accomplishment-type-symbol {
+            width: 180px !important;
+            height: 180px !important;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+        }
+        .accomplishment-type-symbol img {
+            margin: 0 10px;
+        }
+        .certificate .accomplishment-rendering .deco-corner-tl, .certificate .accomplishment-rendering .deco-corner-tr {
+            border-top: 20px solid #6CA95B !important;
+        }
+        .certificate .accomplishment-rendering .deco-corner-bl, .certificate .accomplishment-rendering .deco-corner-br {
+            border-bottom: 20px solid #6CA95B !important;
+        }
+        .accomplishment-summary.copy.copy-lead, .accomplishment-statement-detail.copy.copy-lead {
+            color: #626262 !important;
+            color: #7E7E7E !important;
+            margin: 0 auto;
+            margin-bottom: 5px;
+            font-size: 16px;
+            margin-top: -10px;
+        }
+        .accomplishment-summary.copy.copy-lead {
+            margin-bottom: 5px !important;
+            font-size: 24px !important;
+            margin-top: 10px !important;
+        }
+        .accomplishment-statement-detail.copy.copy-lead {
+            margin-bottom: 0px;
+            line-height: 1.2 !important;
+        }
+        .accomplishment-statement-lead {
+            margin-bottom: 0px !important;
+        }
+        .accomplishment-recipient.hd-1.emphasized, .accomplishment-course.hd-1.emphasized {
+            font-weight: bolder;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            font-size: 18px;
+            color: #243B53;
+        }
+        .accomplishment-course.hd-1.emphasized {
+            font-weight: 400 !important;
+            text-transform: capitalize;
+            font-size: 24px;
+            color: #243B53;
+        }
+        .accomplishment-rendering .accomplishment-signatories {
+            border: none !important;
+        }
+        .layout-accomplishment .accomplishment-signatories .signatory .signatory-signature {
+            padding: 0px !important;
+        }
+        .layout-accomplishment .accomplishment-signatories .signatory {
+            width: calc(25% - 1rem) !important;
+            padding-top: 12px;
+        }
+        .certificate-title {
+            font-size: 18px;
+            color: #585858;
+            font-weight: 600;
+            width: 650px;
+            margin: 0 auto;
+            margin-bottom: 15px;
+        }
+        .accomplishment-course-name {
+            letter-spacing: 0px;
+            font-weight: 900;
+            font-size: 18px;
+            line-height: 1.2 !important;
+        }
+        .accomplishment-rendering .accomplishment-statement, .accomplishment-rendering .accomplishment-signatories{
+            margin-bottom:0px;
+            border-bottom: none;
+            padding-bottom: 0px;
+        }
+        .wrapper-statement-and-signatories {
+            margin-top: -15px;
+            border: transparent !important;
+        }
+    </style>
 </head>
 
 <body class="layout-accomplishment view-valid-accomplishment ${dir_rtl} certificate certificate-${course_mode_class}" data-view="valid-accomplishment">
@@ -44,8 +157,6 @@ course_mode_class = course_mode if course_mode else ''
         ${self.body()}
 
         <hr class="divider sr-only">
-
-        <%include file="_accomplishment-footer.html" />
     </div>
 
     <%include file="_assets-secondary.html" />

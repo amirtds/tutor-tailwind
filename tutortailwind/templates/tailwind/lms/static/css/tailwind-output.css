@@ -1422,6 +1422,14 @@ select {
   font-weight: 600 !important;
 }
 
+.uppercase {
+  text-transform: uppercase !important;
+}
+
+.capitalize {
+  text-transform: capitalize !important;
+}
+
 .leading-5 {
   line-height: 1.25rem !important;
 }

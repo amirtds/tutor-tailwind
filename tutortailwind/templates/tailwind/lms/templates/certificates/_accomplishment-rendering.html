@@ -5,56 +5,89 @@
 course_mode_class = course_mode if course_mode else ''
 %>
 
+<style>
+    .accomplishment-recipient.hd-1.emphasized {
+        color: #6CA95B;
+        font-weight: 900;
+        font-size: 28px;
+        border-bottom: 2px solid #6CA95B;
+        max-width: 45rem !important;
+        margin: 0 auto;
+    }
+</style>
+
 <main class="accomplishment accomplishment-main">
 
     <div class="wrapper-accomplishment-rendering">
-        <div class="accomplishment-rendering" style="background-image: url('https://junioper-basic-dev-academix-bucket.s3.amazonaws.com/certificate_background.jpeg'); background-size: cover;">
-            <span class="deco-corner deco-corner-tl"></span>
-            <span class="deco-corner deco-corner-tr"></span>
-            <span class="deco-corner deco-corner-bl"></span>
-            <span class="deco-corner deco-corner-br"></span>
-
-            <!-- <div class="accomplishment-type">
-                <span class="accomplishment-type-symbol">
-                    <img class="src" src="/static/certificates/images/ico-${course_mode_class}.png" alt="Image for course mode of type ${course_mode_class}">
+        <div class="accomplishment-rendering">
+            <div class="accomplishment-type">
+                <span class="accomplishment-type-symbol" style="width: 380px !important;margin-top: 40px;">
+                    % for logo in certificate_logo:
+                        % if logo.lower() == "jes":
+                            <img class="src" style="width: 45%;" src="/static/tailwind/images/logo.svg" alt="Image for course mode of type ${course_mode_class}">
+                        % elif logo.lower() == "canada wordmark":
+                            <img class="src" style="width: 40%;" src="/static/tailwind/images/canada.png" alt="Image for course mode of type ${course_mode_class}">
+                        % elif logo.lower() == "visual identity for international assistance":
+                            <img class="src" style="width: 40%;" src="/static/tailwind/images/partners.png" alt="Image for course mode of type ${course_mode_class}">
+                        % elif logo.lower() == "isjup":
+                            <img class="src" style="width: 45%;" src="/static/tailwind/images/ISJUP.png" alt="Image for course mode of type ${course_mode_class}">
+                        % elif logo.lower() == "organo judicial":
+                            <img class="src" style="width: 20%;" src="/static/tailwind/images/ORGANO_JUDICIAL.png" alt="Image for course mode of type ${course_mode_class}">
+                        % elif logo.lower() == "ministerio publico honduras":
+                            <img class="src" style="width: 40%;" src="/static/tailwind/images/ministerio_publico_honduras.png" alt="Image for course mode of type ${course_mode_class}">
+                        % elif logo.lower() == "escuela ministerio publico":
+                            <img class="src" style="" src="/static/tailwind/images/escuela_ministerio_publico.png" alt="Image for course mode of type ${course_mode_class}">
+                        % elif logo.lower() == "fiscalia el salvador":
+                            <img class="src" style="" src="/static/tailwind/images/fiscalia_el_salvador.png" alt="Image for course mode of type ${course_mode_class}">
+                        % elif logo.lower() == "dij":
+                            <img class="src" style="width: 25%;" src="/static/tailwind/images/dij.jpg" alt="Image for course mode of type ${course_mode_class}">
+                        % elif logo.lower() == "oij":
+                            <img class="src" style="width: 70%;margin-top: 30px;" src="/static/tailwind/images/OIJ.png" alt="Image for course mode of type ${course_mode_class}">
+                         % elif logo.lower() == "mp-cr":
+                            <img class="src" style="width: 35%;margin-top: 10px;" src="/static/tailwind/images/MP-CR.jpg" alt="Image for course mode of type ${course_mode_class}">
+                        % endif
+                    % endfor
                 </span>
-                <span class="accomplishment-type-label hd-3">${document_title}</span>
-            </div> -->
+            </div>
 
-            <div class="" style="margin-top: 200px;margin-left: 50px;">
-                <div class="" style="float: left;text-align: left;margin-top: -13px;">
-                    <p class="accomplishment-statement-lead" style="margin-bottom: 4rem;">
-                        <span class="accomplishment-summary copy copy-lead" style="margin-bottom: 11px;margin-left: 0px;width: 70%;">This is to certify that </span>
-                        <strong class="accomplishment-recipient hd-1 emphasized" style="font-size: 1.4rem;margin-bottom: 11px;">${accomplishment_copy_name}</strong>
-                        <span class="accomplishment-summary copy copy-lead" style="margin-bottom: 11px;">has successfully completed and received a passing grade in </span>
-
+            <div class="wrapper-statement-and-signatories">
+                <div class="accomplishment-statement">
+                    <p class="accomplishment-statement-lead">
+                        <p style="font-size: 28px;color: #818181;margin-bottom: 15px;text-transform: uppercase;font-weight: 900;">${_("CERTIFICATE OF COMPLETION")}</p>
+                        <p class="certificate-title">${certificate_title}</p>
+                        <p class="accomplishment-recipient hd-1 emphasized">${accomplishment_copy_name}</p>
                         <span class="accomplishment-course hd-1 emphasized">
-                            <span class="accomplishment-course-number" style="font-size: 1.4rem;">${course_number}</span>:
-                            <span class="accomplishment-course-name" style="font-size: 1.4rem;">${accomplishment_copy_course_name}</span>
+                            <span class="accomplishment-summary copy copy-lead" style="text-transform: none;">${_("Has successfully completed")}</span>
+                            <span class="accomplishment-course-name">${certificate_name}</span>
                         </span>
-                        <span class="accomplishment-summary copy copy-lead" style="margin-bottom: 11px;margin-left: 0px;width: 70%;">a course of study authorised by The Institute for Social Science and Humanities (Iran Academia) and offered through AcademiX</span>
                     </p>
-
-                    <!-- <p class="accomplishment-statement-detail copy copy-lead">${accomplishment_copy_course_description}</p> -->
+                    <p class="accomplishment-statement-detail copy copy-lead">${certificate_duration_place}</p>
                 </div>
 
                 % if mode != 'base':
-                <div class="accomplishment-signatories" style="">
-                    <h3 class="accomplishment-signatories-title sr-only">${_("Noted by")}</h3>
-
+                <div class="accomplishment-signatories">
                     <div class="wrapper-signatories">
                         <div class="list-signatories">
                             % if certificate_data:
                                 % for signatory in certificate_data.get('signatories', []):
-                                <div class="signatory" style="width: 50%;margin-top: -30px;">
-                                    <img style="display: block;max-height: 5rem;margin: 0 auto;" class="" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
+                                        <div class="signatory">
+                                        % if signatory.get('signature_image_path'):
+                                            <img class="signatory-signature" src="${static.url(signatory['signature_image_path'])}" alt="${signatory['name']}">
+                                            <h4 class="signatory-name hd-5" style="color: #6CA95B; line-height: 1.3;">${signatory['name']}</h4>
+                                            <p class="signatory-credentials copy copy-micro">
+                                                <span class="role">${signatory['title']}</span>
+                                                <span class="organization">${signatory['organization']}</span>
+                                            </p>
+                                        </div>
+                                        % else:
+                                            <h4 class="signatory-name hd-5" style="padding-top: 80px; color: #6CA95B; line-height: 1.3;">${signatory['name']}</h4>
+                                            <p class="signatory-credentials copy copy-micro">
+                                                <span class="role">${signatory['title']}</span>
+                                                <span class="organization">${signatory['organization']}</span>
+                                            </p>
+                                        </div>
+                                        % endif
 
-                                    <h4 class="signatory-name hd-5">${signatory['name']}</h4>
-                                    <p class="signatory-credentials copy copy-micro">
-                                        <span class="role">${signatory['title']}</span>
-                                        <span class="organization">${signatory['organization']}</span>
-                                    </p>
-                                </div>
                                 % endfor
                             % endif
                         </div>
@@ -62,30 +95,12 @@ course_mode_class = course_mode if course_mode else ''
                 </div>
                 % endif
             </div>
-
-            <!-- <div class="accomplishment-orgs">
-                <h3 class="accomplishment-orgs-title sr-only">${_("Supported by the following organizations")}</h3>
-                <ul class="wrapper-orgs list-orgs">
-                    <li class="wrapper-organization">
-                        <div class="organization organization-edX">
-                            <img class="organization-logo" src="${logo_src}" alt="${platform_name}">
-                        </div>
-                    </li>
-                    % if organization_logo:
-                    <li class="wrapper-organization">
-                        <div class="organization">
-                            <img class="organization-logo" src="${organization_logo.url}" alt="${platform_name}">
-                        </div>
-                    </li>
-                    % endif
-                </ul>
-            </div> -->
         </div>
     </div>
 
     <div class="wrapper-accomplishment-metadata">
         <div class="accomplishment-metadata">
-            <h2 class="accomplishment-metadata-title hd-6">More about ${accomplishment_copy_name} accomplishment</h2>
+            <h2 class="accomplishment-metadata-title hd-6">${accomplishment_copy_more_about}</h2>
 
             <div class="wrapper-metadata">
                 <dl class="metadata accomplishment-recipient">
@@ -101,11 +116,11 @@ course_mode_class = course_mode if course_mode else ''
                     </dd>
                 </dl>
                 <dl class="metadata accomplishment-id">
+                    <dt class="label copy copy-meta">${certificate_id_number_title}:</dt>
                     <dd class="value copy copy-base">${certificate_id_number}</dd>
-                    <dt class="label copy copy-meta">Valid Certificate ID </dt>
                 </dl>
                 <dl class="metadata accomplishment-date">
-                    <dt class="label copy copy-meta">Date </dt>
+                    <dt class="label copy copy-meta">${certificate_date_issued_title}</dt>
                     <dd class="value copy copy-base">${certificate_date_issued}</dd>
                 </dl>
             </div>
@@ -113,11 +128,3 @@ course_mode_class = course_mode if course_mode else ''
     </div>
 
 </main>
-
-<style>
-    .accomplishment-rendering{
-        background-size: cover;
-        -webkit-print-color-adjust: exact !important;
-        color-adjust: exact !important;
-    }
-</style>
