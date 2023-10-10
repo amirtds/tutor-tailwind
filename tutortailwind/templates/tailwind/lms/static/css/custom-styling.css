@@ -362,3 +362,7 @@ background: #6CA93D url(/static/tailwind/images/map-Intersection.svg) no-repeat 
 content: "• ";
 color: #fff;
 }
+
+.courses-listing-item {
+  width: 100% !important;
+}
