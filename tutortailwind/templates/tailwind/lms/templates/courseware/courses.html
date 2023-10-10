@@ -69,25 +69,26 @@
         <div id="filter-bar" class="filters hide-phone is-collapsed">
         </div>
         % endif
-
-        <div class="courses${'' if course_discovery_enabled else ' no-course-discovery'}" role="region" aria-label="${_('List of Courses')}">
-          <ul class="courses-listing courses-list mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-            %for course in sorted_courses:
-              <li class="courses-listing-item w-full mb-20">
-                <%include file="../course.html" args="course=course" />
-              </li>
-            %endfor
-          </ul>
+        <div class="flex">
+          <div class="courses${'' if course_discovery_enabled else ' no-course-discovery'}" role="region" aria-label="${_('List of Courses')}">
+            <ul class="courses-listing courses-list mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+              %for course in sorted_courses:
+                <li class="courses-listing-item w-full mb-20">
+                  <%include file="../course.html" args="course=course" />
+                </li>
+              %endfor
+            </ul>
+          </div>
+          % if course_discovery_enabled:
+          <aside aria-label="${_('Refine Your Search')}" class="search-facets phone-menu flex-auto h-full">
+            <h2 class="header-search-facets">${_('Refine Your Search')}</h2>
+            <section class="search-facets-lists">
+            </section>
+          </aside>
+          % endif
         </div>
-
-
-        % if course_discovery_enabled:
-        <aside aria-label="${_('Refine Your Search')}" class="search-facets phone-menu">
-          <h2 class="header-search-facets">${_('Refine Your Search')}</h2>
-          <section class="search-facets-lists">
-          </section>
-        </aside>
-        % endif
+          
+          
 
       </section>
     </section>

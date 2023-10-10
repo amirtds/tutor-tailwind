@@ -50,7 +50,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
             props={}
         )}
     % endif
-    <div class="main-header">
+    <div class="main-header mx-auto max-w-7xl">
         <%include file="navbar-logo-header.html" args="online_help_token=online_help_token"/>
         <div class="hamburger-menu" role="button" aria-label=${_("Options Menu")} aria-expanded="false" aria-controls="mobile-menu" tabindex="0">
             <span class="line"></span>
@@ -68,7 +68,7 @@ from openedx.core.djangoapps.site_configuration import helpers as configuration_
     % if header_language_selector_is_enabled():
         <% languages = released_languages() %>
         % if len(languages) > 1:
-            <form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form" style="margin-top: 25px;">
+            <form action="/i18n/setlang/" method="post" class="settings-language-form" id="language-settings-form">
                 <input type="hidden" id="csrf_token" name="csrfmiddlewaretoken" value="${csrf_token}">
                 % if user.is_authenticated:
                     <input title="preference api" type="hidden" class="url-endpoint" value="${reverse('preferences_api', kwargs={'username': user.username})}" data-user-is-authenticated="true">

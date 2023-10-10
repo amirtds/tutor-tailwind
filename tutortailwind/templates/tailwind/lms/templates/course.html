@@ -10,7 +10,7 @@ from six import text_type
 <div class="relative flex flex-col items-start justify-between bg-white shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl border-b-4 border-sky-900 hover:bg-gray-50 h-full">
   <a class="custom-anchor w-full" href="${reverse('about_course', args=[text_type(course.id)])}">
     % if course.course_country:
-      <div class="absolute top-0 left-0 bg-opacity-75 bg-gray-300 text-sky-900 px-4 py-2 font-semibold text-sm">${course.course_country}</div>
+      <div class="absolute top-0 left-0 bg-opacity-75 bg-sky-900 text-white px-4 py-2 font-semibold text-sm">${course.course_country}</div>
     % endif
     <img class="w-full h-56" src="${course.course_image_url}" alt="${course.display_name_with_default}">
     <div class="p-4 flex flex-col justify-between flex-grow">
@@ -20,21 +20,21 @@ from six import text_type
         else:
             course_date_string = ''
         %>
-      <h3 class="text-lg font-black text-sky-900 mb-2">${course.display_name_with_default}</h3>
+      <h3 class="text-base font-black text-sky-900 mb-2">${course.display_name_with_default}</h3>
       % if course.short_description:
-        <p class="py-2 text-sky-800 description line-clamp-3 overflow-ellipsis overflow-hidden text-md leading-loose">${course.short_description if course.short_description else 'No course description available.'}</p>
+        <p class="py-2 text-sky-700 description line-clamp-3 overflow-ellipsis overflow-hidden text-base leading-loose mb-2 font-normal">${course.short_description if course.short_description else 'No course description available.'}</p>
       % endif
       % if course.language:
         <%
           if course.language == "es":
-            language = "ESPAÑOL"
+            language = "Español"
           elif course.language == "en":
             language = "English"
         %>
-        <h3 class="text-base font-semibold text-sky-900 mb-2 uppercase">${_("Language")}: ${language}</h3>
+        <h3 class="text-base font-semibold text-sky-900 mb-2 capitalize">${_("Language")}: <span class="font-normal capitalize">${language}</span></h3>
       % endif
       % if course.course_access:
-        <h3 class="text-base font-semibold text-sky-900 mb-2">${_("Access")}: ${course.course_access}</h3>
+        <h3 class="text-base font-semibold text-sky-900 mb-2 capitalize">${_("Access")}: <span class="font-normal capitalize">${course.course_access}</span></h3>
       % endif
     </div>
   </a>
