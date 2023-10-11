@@ -80,7 +80,7 @@ from lms.djangoapps.courseware.courses import get_course_blocks_completion_summa
     lang="${course_overview.language}"
 % endif
 >
-<article class="relative isolate flex flex-col gap-14 lg:flex-row mt-12 pt-6 course${mode_class}" aria-labelledby="course-title-${enrollment.course_id}" id="course-card-${course_card_index}">
+<article class="relative isolate flex flex-col gap-10 lg:flex-row py-6 course${mode_class}" aria-labelledby="course-title-${enrollment.course_id}" id="course-card-${course_card_index}">
   <% course_target = course_home_url(course_overview.id) %>
   <%
     enrollment_date = course_overview.self_paced and enrollment and enrollment.created
@@ -183,8 +183,6 @@ from lms.djangoapps.courseware.courses import get_course_blocks_completion_summa
             <span>${course_overview.display_name_with_default}</span>
           % endif
         </h3>
-        <span class="inline-flex items-center rounded-full bg-gray-50 px-2 py-1 text-gray-600 ring-1 ring-inset ring-gray-500/10 info-university text-sm font-light">${course_overview.display_org_with_default}</span>
-        <span class="inline-flex items-center rounded-full bg-gray-50 px-2 py-1 text-gray-600 ring-1 ring-inset ring-gray-500/10 info-course-id text-sm font-light">${course_overview.display_number_with_default}</span>
         <div class="wrapper-course-info-actions">
           <div class="wrapper-course-info-row">
             <div class="course-info mt-4">
@@ -219,15 +217,15 @@ from lms.djangoapps.courseware.courses import get_course_blocks_completion_summa
                 grade = course_grade.percent * 100
               %>
               <div class="course-progress my-4">
-                <span class="progress-bar-label">${_('Progress')}</span>
-                <span class="text-xl font-bold mx-2">${percent_complete}%</span>
+                <span class="progress-bar-label text-sm">${_('Progress')}</span>
+                <span class="text-base font-bold mx-2">${percent_complete}%</span>
                 <div class="h-2 bg-gray-200 rounded mb-6">
                   <div class="h-full bg-green-500 rounded" style="width: ${percent_complete}%"></div>
                 </div>
-                <span class="grade-bar-label">${_('Current Grade')}</span>
-                <span class="text-xl font-bold mx-2">${grade}%</span>
-                <span class="grade-bar-label">${_('Passing Grade')}</span>
-                <span class="text-xl font-bold mx-2">${"{0:.0f}%".format(float(course_overview.lowest_passing_grade)*100)}</span>
+                <span class="grade-bar-label text-sm">${_('Current Grade')}</span>
+                <span class="text-base font-bold mx-2">${grade}%</span>
+                <span class="grade-bar-label text-sm">${_('Passing Grade')}</span>
+                <span class="text-base font-bold mx-2">${"{0:.0f}%".format(float(course_overview.lowest_passing_grade)*100)}</span>
               </div>
           </div>
           <div class="continue-button">
@@ -423,7 +421,7 @@ from lms.djangoapps.courseware.courses import get_course_blocks_completion_summa
                   % if can_unenroll:
                     <li class="actions-item mt-4" id="actions-item-unenroll-${dashboard_index}" role="menuitem">
                       <% course_refund_url = reverse('course_run_refund_status', args=[six.text_type(course_overview.id)]) %>
-                          <a href="#unenroll-modal" class="action action-unenroll" rel="leanModal"
+                          <a href="#unenroll-modal" class="action action-unenroll text-sm" rel="leanModal"
                             data-course-id="${course_overview.id}"
                             data-course-number="${course_overview.number}"
                             data-course-name="${course_overview.display_name_with_default}"
@@ -438,14 +436,14 @@ from lms.djangoapps.courseware.courses import get_course_blocks_completion_summa
                     </li>
                 % elif partner_managed_enrollment:
                   <li class="actions-item mt-4" id="actions-item-enrolled-by-partner-${dashboard_index}" role="menuitem">
-                    <a class="action action-message action-unenroll-managed-enrollment">
+                    <a class="action action-message action-unenroll-managed-enrollment text-sm">
                       ${_('You are enrolled by your institution and you should reach out to your institution to drop this course.')}
                     </a>
                   </li>
                 % endif
                   <li class="actions-item mt-4" id="actions-item-email-settings-${dashboard_index}" role="menuitem">
                     % if show_email_settings:
-                        <a href="#email-settings-modal" class="action action-email-settings" rel="leanModal" data-course-id="${course_overview.id}" data-course-number="${course_overview.number}" data-dashboard-index="${dashboard_index}" data-optout="${course_overview.id in course_optouts}">${_('Email Settings')}</a>
+                        <a href="#email-settings-modal" class="action action-email-settings text-sm" rel="leanModal" data-course-id="${course_overview.id}" data-course-number="${course_overview.number}" data-dashboard-index="${dashboard_index}" data-optout="${course_overview.id in course_optouts}">${_('Email Settings')}</a>
                     % endif
                   </li>
                 </ul>

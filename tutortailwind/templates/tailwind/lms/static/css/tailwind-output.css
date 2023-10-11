@@ -838,10 +838,6 @@ select {
   margin-top: 2.5rem !important;
 }
 
-.mt-12 {
-  margin-top: 3rem !important;
-}
-
 .mt-16 {
   margin-top: 4rem !important;
 }
@@ -875,10 +871,6 @@ select {
 
 .flex {
   display: flex !important;
-}
-
-.inline-flex {
-  display: inline-flex !important;
 }
 
 .table {
@@ -999,8 +991,8 @@ select {
   justify-content: space-between !important;
 }
 
-.gap-14 {
-  gap: 3.5rem !important;
+.gap-10 {
+  gap: 2.5rem !important;
 }
 
 .gap-x-6 {
@@ -1188,11 +1180,6 @@ select {
   padding: 1rem !important;
 }
 
-.px-2 {
-  padding-left: 0.5rem !important;
-  padding-right: 0.5rem !important;
-}
-
 .px-3 {
   padding-left: 0.75rem !important;
   padding-right: 0.75rem !important;
@@ -1241,6 +1228,11 @@ select {
 .py-4 {
   padding-top: 1rem !important;
   padding-bottom: 1rem !important;
+}
+
+.py-6 {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
 }
 
 .pb-2 {
@@ -1313,10 +1305,6 @@ select {
 
 .font-bold {
   font-weight: 700 !important;
-}
-
-.font-light {
-  font-weight: 300 !important;
 }
 
 .font-medium {
@@ -1457,10 +1445,6 @@ select {
 
 .ring-inset {
   --tw-ring-inset: inset !important;
-}
-
-.ring-gray-500\/10 {
-  --tw-ring-color: rgb(107 114 128 / 0.1) !important;
 }
 
 .ring-gray-900\/10 {

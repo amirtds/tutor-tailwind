@@ -1003,7 +1003,25 @@ textarea, form#wiki_revision .CodeMirror, input[type="text"], input[type="email"
   padding: 5px 0px;
   padding-left: 5px;
   outline: none;
+  width: 220px;
 }
+.mobile-nav-item.hidden-mobile.nav-item.nav-tab a {
+  font-size: 16px !important;
+}
+.mobile-nav-item.hidden-mobile.nav-item.nav-tab {
+  margin-left: 15px !important;
+}
+.container-xl {
+  margin: 0 auto !important;
+  max-width: 80rem !important;
+}
+#root header .logo {
+  height: 3.5rem !important;
+}
+.flex-grow-1.course-title-lockup span.course-title {
+  font-size: 14px !important;
+}
+
 .course-outline .block-tree .section .section-name {
   border-radius: 5px;
   padding: 10px !important;
@@ -1143,6 +1161,9 @@ body.view-in-course .info-wrapper {
 .login-register-content a {
   color: #6CA95B !important;
 }
+.search-bar .search-button {
+  background: #6CA95B !important;;
+}
 .hero-cta {
   display: inline-block;
   background-color: transparent;
@@ -1210,6 +1231,9 @@ body.view-in-course .info-wrapper {
     color: #6CA95B !important;
     font-size: 1.5rem !important;
     font-weight: 600 !important;
+}
+.global-header .nav-links .main .nav-tab a.active, .global-header .nav-links .main .nav-tab a:hover {
+  border-bottom-color: #6CA95B !important;
 }
 .course-info .course-staff .teacher-role {
     font-size: 12px;
