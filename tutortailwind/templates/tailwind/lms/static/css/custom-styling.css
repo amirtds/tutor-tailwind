@@ -371,6 +371,9 @@ color: #fff;
 #main p {
   line-height: 1.5;
 }
+.wrap-instructor-info .instructor-info-action {
+  font-size: 14px !important;
+}
 .wrap-instructor-info .instructor-info-action:hover {
   background-color: #6CA95B !important;
   color: #F0F4F8 !important;
@@ -1014,9 +1017,6 @@ textarea, form#wiki_revision .CodeMirror, input[type="text"], input[type="email"
 .container-xl {
   margin: 0 auto !important;
   max-width: 80rem !important;
-}
-#root header .logo {
-  height: 3.5rem !important;
 }
 .flex-grow-1.course-title-lockup span.course-title {
   font-size: 14px !important;
