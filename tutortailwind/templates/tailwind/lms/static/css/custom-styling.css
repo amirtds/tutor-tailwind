@@ -992,15 +992,6 @@ textarea, form#wiki_revision .CodeMirror, input[type="text"], input[type="email"
 .forum-nav-browse-menu-wrapper {
   background: #dedede !important;
 }
-
-.register.disabled {
-  padding: 14px !important;
-  border-radius: 5px !important;
-  background: #fff !important;
-  color: #fff !important;
-  font-weight: 400 !important;
-  border: none !important;
-}
 #settings-language-value {
   border: none;
   padding: 5px 0px;
@@ -1786,4 +1777,13 @@ body.view-in-course .info-wrapper {
 }
 .course-title .course-target-link, .actions-item a.action {
   color: #004F5D !important;
+}
+.intro-inner-wrapper .main-cta .register.disabled {
+  padding: 14px !important;
+  border-radius: 5px !important;
+  background: #fff !important;
+  background-color: #fff !important;
+  color: #004F5D !important;
+  font-weight: 600 !important;
+  border: none !important;
 }
