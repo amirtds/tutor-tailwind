@@ -828,7 +828,7 @@ color: #fff;
   border: 2px solid #626262 !important;
 }
 .dashboard .main-container .my-courses .listing-courses .course-item {
-  border: 1px solid #CFCFCF !important;
+  border: 1px solid #cfcfcf38 !important;
   border-radius: 5px !important;
   background: #FFF;
   padding-bottom: 0px !important;
@@ -1783,4 +1783,7 @@ body.view-in-course .info-wrapper {
 }
 .recent-updates .updates-article .date {
   background: #C1F2C7!important;
+}
+.course-title .course-target-link, .actions-item a.action {
+  color: #004F5D !important;
 }
