@@ -9,9 +9,6 @@ from six import text_type
 
 <div class="relative flex flex-col items-start justify-between bg-white shadow-md overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl border-b-4 border-sky-900 hover:bg-gray-50 h-full">
   <a class="custom-anchor w-full" href="${reverse('about_course', args=[text_type(course.id)])}">
-    % if course.course_country:
-      <div class="absolute top-0 left-0 bg-opacity-75 bg-sky-900 text-white px-4 py-2 font-semibold text-sm">${course.course_country}</div>
-    % endif
     <img class="w-full h-56" src="${course.course_image_url}" alt="${course.display_name_with_default}">
     <div class="p-4 flex flex-col justify-between flex-grow">
         <%
@@ -32,9 +29,6 @@ from six import text_type
             language = "English"
         %>
         <h3 class="text-base font-semibold text-sky-900 mb-2 capitalize">${_("Language")}: <span class="font-normal capitalize">${language}</span></h3>
-      % endif
-      % if course.course_access:
-        <h3 class="text-base font-semibold text-sky-900 mb-2 capitalize">${_("Access")}: <span class="font-normal capitalize">${course.course_access}</span></h3>
       % endif
     </div>
   </a>
