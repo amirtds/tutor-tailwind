@@ -109,22 +109,22 @@ from lms.djangoapps.courseware.courses import get_course_blocks_completion_summa
         endif
     endif
     %>
-    <div class="wrapper-course-image relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0" aria-hidden="true">
+    <div class="wrapper-course-image relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-auto lg:w-64 lg:shrink-0" aria-hidden="true">
       % if show_courseware_link and not is_unfulfilled_entitlement:
         % if not is_course_expired:
             <a href="${course_target}" data-course-key="${enrollment.course_id}" class="cover course-target-link" tabindex="-1">
-                <img src="${course_overview.image_urls['small']}" alt="${_('{course_number} {course_name} Home Page').format(course_number=course_overview.number, course_name=course_overview.display_name_with_default)}" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover">
+                <img src="${course_overview.image_urls['small']}" alt="${_('{course_number} {course_name} Home Page').format(course_number=course_overview.number, course_name=course_overview.display_name_with_default)}" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-fill">
                 <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
             </a>
         % else:
             <a class="fade-cover">
-                <img src="${course_overview.image_urls['small']}" alt="${_('{course_number} {course_name} Cover Image').format(course_number=course_overview.number, course_name=course_overview.display_name_with_default)}" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover">
+                <img src="${course_overview.image_urls['small']}" alt="${_('{course_number} {course_name} Cover Image').format(course_number=course_overview.number, course_name=course_overview.display_name_with_default)}" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-fill">
                 <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
             </a>
         % endif
       % else:
         <a class="cover">
-            <img src="${course_overview.image_urls['small']}" alt="${_('{course_number} {course_name} Cover Image').format(course_number=course_overview.number, course_name=course_overview.display_name_with_default)}" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-cover">
+            <img src="${course_overview.image_urls['small']}" alt="${_('{course_number} {course_name} Cover Image').format(course_number=course_overview.number, course_name=course_overview.display_name_with_default)}" class="absolute inset-0 h-full w-full rounded-2xl bg-gray-50 object-fill">
             <div class="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
         </a>
       % endif

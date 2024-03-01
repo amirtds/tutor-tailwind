@@ -786,11 +786,6 @@ select {
   grid-column-end: 1 !important;
 }
 
-.mx-2 {
-  margin-left: 0.5rem !important;
-  margin-right: 0.5rem !important;
-}
-
 .mx-auto {
   margin-left: auto !important;
   margin-right: auto !important;
@@ -1171,9 +1166,9 @@ select {
   stroke: #e5e7eb !important;
 }
 
-.object-cover {
-  -o-object-fit: cover !important;
-     object-fit: cover !important;
+.object-fill {
+  -o-object-fit: fill !important;
+     object-fit: fill !important;
 }
 
 .p-4 {
@@ -1877,8 +1872,8 @@ select {
     display: flex !important;
   }
 
-  .lg\:aspect-square {
-    aspect-ratio: 1 / 1 !important;
+  .lg\:aspect-auto {
+    aspect-ratio: auto !important;
   }
 
   .lg\:w-64 {
