@@ -218,14 +218,14 @@ from lms.djangoapps.courseware.courses import get_course_blocks_completion_summa
               %>
               <div class="course-progress my-4">
                 <span class="progress-bar-label text-sm">${_('Progress')}</span>
-                <span class="text-base font-bold mx-2">${percent_complete}%</span>
+                <span class="text-base font-bold">${percent_complete}%</span>
                 <div class="h-2 bg-gray-200 rounded mb-6">
                   <div class="h-full bg-green-500 rounded" style="width: ${percent_complete}%"></div>
                 </div>
                 <span class="grade-bar-label text-sm">${_('Current Grade')}</span>
-                <span class="text-base font-bold mx-2">${grade}%</span>
+                <span class="text-base font-bold">${grade}%</span>
                 <span class="grade-bar-label text-sm">${_('Passing Grade')}</span>
-                <span class="text-base font-bold mx-2">${"{0:.0f}%".format(float(course_overview.lowest_passing_grade)*100)}</span>
+                <span class="text-base font-bold">${"{0:.0f}%".format(float(course_overview.lowest_passing_grade)*100)}</span>
               </div>
           </div>
           <div class="continue-button">
