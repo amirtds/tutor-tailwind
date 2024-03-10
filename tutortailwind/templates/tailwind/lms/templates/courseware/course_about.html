@@ -164,7 +164,7 @@ from six import string_types
         <ol class="important-dates">
           <li class="important-dates-item"><span class="icon fa fa-info-circle" aria-hidden="true"></span><p class="important-dates-item-title">${_("Course Number")}</p><span class="important-dates-item-text course-number">${course.display_number_with_default}</span></li>
           % if course.course_topics:
-            <li class="important-dates-item"><span class="icon fa fa-info-circle" aria-hidden="true"></span><p class="important-dates-item-title">${_("Course Topic")}</p><span class="important-dates-item-text course-number">${course.course_topics}</span></li>
+            <li class="important-dates-item"><span class="icon fa fa-info-circle" aria-hidden="true"></span><p class="important-dates-item-title">${_("Course Topic")}</p><span class="important-dates-item-text course-number mt-2">${course.course_topics}</span></li>
           % endif
           % if not course.start_date_is_still_default:
               <%
