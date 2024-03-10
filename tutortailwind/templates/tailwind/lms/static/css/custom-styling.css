@@ -1787,3 +1787,7 @@ body.view-in-course .info-wrapper {
   font-weight: 600 !important;
   border: none !important;
 }
+
+.faq {
+  display: none !important;
+}
