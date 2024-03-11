@@ -54,13 +54,13 @@ from six import text_type
             body=six.moves.urllib.parse.quote_plus(email_body.encode('UTF-8'))
         )
       %>
-      <a href="${tweet_action}" class="share">
+      <a href="${tweet_action}" class="share" target="_blank">
         <span class="icon fa fa-twitter" aria-hidden="true"></span><span class="sr">${_("Tweet that you've enrolled in this course")}</span>
       </a>
-      <a href="${facebook_link}" class="share">
+      <a href="${facebook_link}" class="share" target="_blank">
         <span class="icon fa fa-thumbs-up" aria-hidden="true"></span><span class="sr">${_("Post a Facebook message to say you've enrolled in this course")}</span>
       </a>
-      <a href="${email_link}" class="share">
+      <a href="${email_link}" class="share" target="_blank">
         <span class="icon fa fa-envelope" aria-hidden="true"></span><span class="sr">${_("Email someone to say you've enrolled in this course")}</span>
       </a>
   </div>
