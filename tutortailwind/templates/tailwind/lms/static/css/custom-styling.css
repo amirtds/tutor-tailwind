@@ -1791,3 +1791,7 @@ body.view-in-course .info-wrapper {
 .faq {
   display: none !important;
 }
+
+.cc-theme-classic .cc-btn {
+  color: #fff !important;
+}
