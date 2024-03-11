@@ -240,6 +240,31 @@ from common.djangoapps.pipeline_mako import render_require_js_path_overrides
     });
   </script>
 
+<script>
+  function getQueryParameterByName(name, url = window.location.href) {
+      name = name.replace(/[\[\]]/g, '\\$&');
+      const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+          results = regex.exec(url);
+      if (!results) return null;
+      if (!results[2]) return '';
+      return decodeURIComponent(results[2].replace(/\+/g, ' '));
+  }
+
+  function attemptClickOnTopicButton() {
+      const topic = getQueryParameterByName('topic');
+      if (topic) {
+          const buttons = document.querySelectorAll('.facet-option[data-facet="course_topics"]');
+          buttons.forEach(function(button) {
+              if (button.getAttribute('data-value') === topic) {
+                  button.click();
+              }
+          });
+      }
+  }
+
+  // Delay execution to ensure buttons are rendered
+  setTimeout(attemptClickOnTopicButton, 500); // Adjust time as needed
+</script>
 
 </body>
 </html>

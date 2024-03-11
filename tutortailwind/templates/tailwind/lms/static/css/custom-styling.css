@@ -1795,3 +1795,11 @@ body.view-in-course .info-wrapper {
 .cc-theme-classic .cc-btn {
   color: #fff !important;
 }
+
+.find-courses .filters li {
+  background: #6CA95B;
+}
+
+.find-courses .filters li .facet-option {
+  color: #fff;
+}
