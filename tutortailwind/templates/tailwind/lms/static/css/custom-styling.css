@@ -1907,3 +1907,15 @@ code.hljs {
   /* purposely ignored */
   
 }
+
+.inline-code {
+  background: rgba(250, 239, 240, .78) !important;
+  color: #b44437 !important;
+  padding: 3px 4px !important;
+  border-radius: 5px !important;
+  margin: 0 1px !important;
+  font-family: inherit !important;
+  font-size: .86em !important;
+  font-weight: 500 !important;
+  letter-spacing: .3px !important;
+}
