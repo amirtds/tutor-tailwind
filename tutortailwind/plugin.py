@@ -45,7 +45,6 @@ hooks.Filters.ENV_TEMPLATE_TARGETS.add_items(
 # Force the rendering of scss files, even though they are included in a "partials" directory
 hooks.Filters.ENV_PATCHES.add_items(
     [
-        r"tailwind/lms/static/sass/partials/lms/theme/",
         # MFE will install header version 3.0.x and will include indigo-footer as a
         # separate package for use in env.config.jsx
         (
