@@ -55,7 +55,7 @@ hooks.Filters.ENV_PATCHES.add_items(
             "mfe-dockerfile-post-npm-install-learning",
             """
 RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#370ee526a3c3b921ca43738ea4766e8e536723b5'
-RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#d1b606d384853177b1dfc3ccac3383b71942976d'
+RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#807f38f3d0c6858b79b0db4d7ea22c97a3c30542'
 RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#e4ebe43a7f9f9f951640876a3dea8114b5189edb'
 
 """,
@@ -72,7 +72,7 @@ RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#370
             "mfe-dockerfile-post-npm-install-discussions",
             """
 RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#370ee526a3c3b921ca43738ea4766e8e536723b5'
-RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#d1b606d384853177b1dfc3ccac3383b71942976d'
+RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#807f38f3d0c6858b79b0db4d7ea22c97a3c30542'
 RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#e4ebe43a7f9f9f951640876a3dea8114b5189edb'
 """,
         ),
@@ -80,7 +80,7 @@ RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/f
             "mfe-dockerfile-post-npm-install-learner-dashboard",
             """
 RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#370ee526a3c3b921ca43738ea4766e8e536723b5'
-RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#d1b606d384853177b1dfc3ccac3383b71942976d'
+RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#807f38f3d0c6858b79b0db4d7ea22c97a3c30542'
 RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#e4ebe43a7f9f9f951640876a3dea8114b5189edb'
 """,
         ),
@@ -88,7 +88,7 @@ RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/f
             "mfe-dockerfile-post-npm-install-profile",
             """
 RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#370ee526a3c3b921ca43738ea4766e8e536723b5'
-RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#d1b606d384853177b1dfc3ccac3383b71942976d'
+RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#807f38f3d0c6858b79b0db4d7ea22c97a3c30542'
 RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#e4ebe43a7f9f9f951640876a3dea8114b5189edb'
 """,
         ),
@@ -96,7 +96,7 @@ RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/f
             "mfe-dockerfile-post-npm-install-account",
             """
 RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#370ee526a3c3b921ca43738ea4766e8e536723b5'
-RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#d1b606d384853177b1dfc3ccac3383b71942976d'
+RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#807f38f3d0c6858b79b0db4d7ea22c97a3c30542'
 RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#e4ebe43a7f9f9f951640876a3dea8114b5189edb'
 """,
         ),
