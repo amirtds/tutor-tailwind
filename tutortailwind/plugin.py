@@ -58,6 +58,7 @@ RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#052
 RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#a067a4d939e4c25865b2e3921e415bdcebf1cc3f'
 RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#66ecf7a69d952f829f72cf4f81552191a404dec4'
 
+COPY tailwind/env.config.jsx /openedx/app/
 """,
         ),
         (
@@ -74,6 +75,8 @@ RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#052
 RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#052165698e7bf684f83bcdf0cbd961719720855d'
 RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#a067a4d939e4c25865b2e3921e415bdcebf1cc3f'
 RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#66ecf7a69d952f829f72cf4f81552191a404dec4'
+
+COPY tailwind/env.config.jsx /openedx/app/
 """,
         ),
         (
@@ -82,6 +85,8 @@ RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/f
 RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#052165698e7bf684f83bcdf0cbd961719720855d'
 RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#a067a4d939e4c25865b2e3921e415bdcebf1cc3f'
 RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#66ecf7a69d952f829f72cf4f81552191a404dec4'
+
+COPY tailwind/env.config.jsx /openedx/app/
 """,
         ),
         (
@@ -90,6 +95,8 @@ RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/f
 RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#052165698e7bf684f83bcdf0cbd961719720855d'
 RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#a067a4d939e4c25865b2e3921e415bdcebf1cc3f'
 RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#66ecf7a69d952f829f72cf4f81552191a404dec4'
+
+COPY tailwind/env.config.jsx /openedx/app/
 """,
         ),
         (
@@ -98,6 +105,8 @@ RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/f
 RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#052165698e7bf684f83bcdf0cbd961719720855d'
 RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#a067a4d939e4c25865b2e3921e415bdcebf1cc3f'
 RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#66ecf7a69d952f829f72cf4f81552191a404dec4'
+
+COPY tailwind/env.config.jsx /openedx/app/
 """,
         ),
     ]
