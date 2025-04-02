@@ -54,7 +54,7 @@ hooks.Filters.ENV_PATCHES.add_items(
         (
             "mfe-dockerfile-post-npm-install-learning",
             """
-RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#64476f8a97a2dc1571c7121a68e96e194e74e916'
+RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#7c489d849b5ed3d9c4c3b8524cf618e2c4f70b6f'
 RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#a067a4d939e4c25865b2e3921e415bdcebf1cc3f'
 RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#86060f7b01bd83b01d7fb6a3aab1d4bb00343fd3'
 
@@ -63,7 +63,7 @@ RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/f
         (
             "mfe-dockerfile-post-npm-install-authn",
             """
-RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#64476f8a97a2dc1571c7121a68e96e194e74e916'
+RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#7c489d849b5ed3d9c4c3b8524cf618e2c4f70b6f'
 """,
         ),
         # Tutor-Indigo v2.1 targets the styling updates in discussions and learner-dashboard MFE
@@ -71,7 +71,7 @@ RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#644
         (
             "mfe-dockerfile-post-npm-install-discussions",
             """
-RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#64476f8a97a2dc1571c7121a68e96e194e74e916'
+RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#7c489d849b5ed3d9c4c3b8524cf618e2c4f70b6f'
 RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#a067a4d939e4c25865b2e3921e415bdcebf1cc3f'
 RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#86060f7b01bd83b01d7fb6a3aab1d4bb00343fd3'
 """,
@@ -79,7 +79,7 @@ RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/f
         (
             "mfe-dockerfile-post-npm-install-learner-dashboard",
             """
-RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#64476f8a97a2dc1571c7121a68e96e194e74e916'
+RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#7c489d849b5ed3d9c4c3b8524cf618e2c4f70b6f'
 RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#a067a4d939e4c25865b2e3921e415bdcebf1cc3f'
 RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#86060f7b01bd83b01d7fb6a3aab1d4bb00343fd3'
 """,
@@ -87,7 +87,7 @@ RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/f
         (
             "mfe-dockerfile-post-npm-install-profile",
             """
-RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#64476f8a97a2dc1571c7121a68e96e194e74e916'
+RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#7c489d849b5ed3d9c4c3b8524cf618e2c4f70b6f'
 RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#a067a4d939e4c25865b2e3921e415bdcebf1cc3f'
 RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#86060f7b01bd83b01d7fb6a3aab1d4bb00343fd3'
 """,
@@ -95,7 +95,7 @@ RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/f
         (
             "mfe-dockerfile-post-npm-install-account",
             """
-RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#64476f8a97a2dc1571c7121a68e96e194e74e916'
+RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#7c489d849b5ed3d9c4c3b8524cf618e2c4f70b6f'
 RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#a067a4d939e4c25865b2e3921e415bdcebf1cc3f'
 RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#86060f7b01bd83b01d7fb6a3aab1d4bb00343fd3'
 """,
