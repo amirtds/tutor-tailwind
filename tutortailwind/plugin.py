@@ -57,7 +57,7 @@ hooks.Filters.ENV_PATCHES.add_items(
             """
 RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#052165698e7bf684f83bcdf0cbd961719720855d'
 
-COPY env.config.jsx /openedx/app/
+COPY tailwind/env.config.jsx /openedx/app/
 """,
         ),
         (
@@ -73,7 +73,7 @@ RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#052
             """
 RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#052165698e7bf684f83bcdf0cbd961719720855d'
 
-COPY env.config.jsx /openedx/app/
+COPY tailwind/env.config.jsx /openedx/app/
 """,
         ),
         (
@@ -81,7 +81,7 @@ COPY env.config.jsx /openedx/app/
             """
 RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#052165698e7bf684f83bcdf0cbd961719720855d'
 
-COPY env.config.jsx /openedx/app/
+COPY tailwind/env.config.jsx /openedx/app/
 """,
         ),
         (
@@ -89,7 +89,7 @@ COPY env.config.jsx /openedx/app/
             """
 RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#052165698e7bf684f83bcdf0cbd961719720855d'
 
-COPY env.config.jsx /openedx/app/
+COPY tailwind/env.config.jsx /openedx/app/
 """,
         ),
         (
@@ -97,7 +97,7 @@ COPY env.config.jsx /openedx/app/
             """
 RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#052165698e7bf684f83bcdf0cbd961719720855d'
 
-COPY env.config.jsx /openedx/app/
+COPY tailwind/env.config.jsx /openedx/app/
 """,
         ),
     ]
