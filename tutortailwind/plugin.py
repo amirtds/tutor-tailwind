@@ -39,7 +39,7 @@ hooks.Filters.ENV_TEMPLATE_ROOTS.add_item(
 hooks.Filters.ENV_TEMPLATE_TARGETS.add_items(
     [
         ("tailwind", "build/openedx/themes"),
-        ("env.config.jsx", "plugins/mfe/build/mfe"),
+        ("tailwind/env.config.jsx", "plugins/mfe/build/mfe"),
     ],
 )
 
