@@ -56,7 +56,7 @@ hooks.Filters.ENV_PATCHES.add_items(
             """
 RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#370ee526a3c3b921ca43738ea4766e8e536723b5'
 RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#a067a4d939e4c25865b2e3921e415bdcebf1cc3f'
-RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#a47d766ee09c3f713f3149568ec24940cb480f2e'
+RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#86060f7b01bd83b01d7fb6a3aab1d4bb00343fd3'
 
 """,
         ),
@@ -73,7 +73,7 @@ RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#370
             """
 RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#370ee526a3c3b921ca43738ea4766e8e536723b5'
 RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#a067a4d939e4c25865b2e3921e415bdcebf1cc3f'
-RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#a47d766ee09c3f713f3149568ec24940cb480f2e'
+RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#86060f7b01bd83b01d7fb6a3aab1d4bb00343fd3'
 """,
         ),
         (
@@ -81,7 +81,7 @@ RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/f
             """
 RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#370ee526a3c3b921ca43738ea4766e8e536723b5'
 RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#a067a4d939e4c25865b2e3921e415bdcebf1cc3f'
-RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#a47d766ee09c3f713f3149568ec24940cb480f2e'
+RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#86060f7b01bd83b01d7fb6a3aab1d4bb00343fd3'
 """,
         ),
         (
@@ -89,7 +89,7 @@ RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/f
             """
 RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#370ee526a3c3b921ca43738ea4766e8e536723b5'
 RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#a067a4d939e4c25865b2e3921e415bdcebf1cc3f'
-RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#a47d766ee09c3f713f3149568ec24940cb480f2e'
+RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#86060f7b01bd83b01d7fb6a3aab1d4bb00343fd3'
 """,
         ),
         (
@@ -97,7 +97,7 @@ RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/f
             """
 RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#370ee526a3c3b921ca43738ea4766e8e536723b5'
 RUN npm install '@edx/frontend-component-header@git+https://github.com/amirtds/frontend-component-header#a067a4d939e4c25865b2e3921e415bdcebf1cc3f'
-RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#a47d766ee09c3f713f3149568ec24940cb480f2e'
+RUN npm install '@edx/frontend-component-footer@git+https://github.com/amirtds/frontend-component-footer#86060f7b01bd83b01d7fb6a3aab1d4bb00343fd3'
 """,
         ),
     ]
