@@ -8,7 +8,7 @@ const themePluginSlot = {
     {
       op: PLUGIN_OPERATIONS.Insert,
       widget: {
-        id: 'default_contents',
+        id: 'custom_footer',
         type: DIRECT_PLUGIN,
         priority: 1,
         RenderWidget: () => (
