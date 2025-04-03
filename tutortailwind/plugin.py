@@ -137,7 +137,7 @@ hooks.Filters.ENV_PATCHES.add_item(
 )
 
 
-# Apply patches from tutor-indigo
+# Apply patches from tutor-tailwind
 for path in glob(
     os.path.join(
         str(importlib_resources.files("tutortailwind") / "patches"),
