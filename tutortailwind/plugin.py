@@ -61,18 +61,6 @@ hooks.Filters.ENV_PATTERNS_INCLUDE.add_items(
     ]
 )
 
-
-# init script: set theme automatically
-with open(
-    os.path.join(
-        str(importlib_resources.files("tutortailwind") / "templates"),
-        "tailwind",
-    ),
-    encoding="utf-8",
-) as task_file:
-    hooks.Filters.CLI_DO_INIT_TASKS.add_item(("lms", task_file.read()))
-
-
 # Override openedx & mfe docker image names
 @hooks.Filters.CONFIG_DEFAULTS.add(priority=hooks.priorities.LOW)
 def _override_openedx_docker_image(
