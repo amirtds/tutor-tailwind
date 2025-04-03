@@ -67,8 +67,6 @@ with open(
     os.path.join(
         str(importlib_resources.files("tutortailwind") / "templates"),
         "tailwind",
-        "tasks",
-        "init.sh",
     ),
     encoding="utf-8",
 ) as task_file:
