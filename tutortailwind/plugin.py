@@ -61,35 +61,6 @@ hooks.Filters.ENV_PATTERNS_INCLUDE.add_items(
     ]
 )
 
-# Override openedx & mfe docker image names
-@hooks.Filters.CONFIG_DEFAULTS.add(priority=hooks.priorities.LOW)
-def _override_openedx_docker_image(
-    items: list[tuple[str, t.Any]]
-) -> list[tuple[str, t.Any]]:
-    openedx_image = ""
-    mfe_image = ""
-    for k, v in items:
-        if k == "DOCKER_IMAGE_OPENEDX":
-            openedx_image = v
-        elif k == "MFE_DOCKER_IMAGE":
-            mfe_image = v
-    if openedx_image:
-        items.append(("DOCKER_IMAGE_OPENEDX", f"{openedx_image}-tailwind"))
-    if mfe_image:
-        items.append(("MFE_DOCKER_IMAGE", f"{mfe_image}-tailwind"))
-    return items
-
-
-# Load all configuration entries
-hooks.Filters.CONFIG_DEFAULTS.add_items(
-    [(f"TAILWIND_{key}", value) for key, value in config["defaults"].items()]
-)
-hooks.Filters.CONFIG_UNIQUE.add_items(
-    [(f"TAILWIND_{key}", value) for key, value in config["unique"].items()]
-)
-hooks.Filters.CONFIG_OVERRIDES.add_items(list(config["overrides"].items()))
-
-
 #  MFEs that are styled using Tailwind
 tailwind_styled_mfes = [
     "learning",
@@ -121,17 +92,6 @@ hooks.Filters.ENV_PATCHES.add_item(
         "RUN npm install '@edx/brand@git+https://github.com/amirtds/brand-openedx.git#052165698e7bf684f83bcdf0cbd961719720855d'",
     )
 )
-
-
-# Apply patches from tutor-tailwind
-for path in glob(
-    os.path.join(
-        str(importlib_resources.files("tutortailwind") / "patches"),
-        "*",
-    )
-):
-    with open(path, encoding="utf-8") as patch_file:
-        hooks.Filters.ENV_PATCHES.add_item((os.path.basename(path), patch_file.read()))
 
 
 for mfe in tailwind_styled_mfes:
